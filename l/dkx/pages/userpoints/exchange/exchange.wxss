@@ -1,0 +1,107 @@
+/* exchange.wxss */
+
+.title {
+  position: fixed;
+  top: 0rpx;
+  display: flex;
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #ebeff3;
+  border-top: 1rpx solid #d8d8d8;
+  font-size: 38rpx;
+  line-height: 80rpx;
+}
+
+.t1 {
+  width: 435rpx;
+  margin-left: 50rpx;
+  text-align: right;
+}
+
+.t2 {
+  width: 250rpx;
+  margin-right: 70rpx;
+  text-align: right;
+}
+
+.contents {
+  position: fixed;
+  top: 0rpx;
+  width: 750rpx;
+  height: 100%;
+  background-color: #ebeff3;
+}
+
+.item_class {
+  display: flex;
+  height: 120rpx;
+  background-color: white;
+  border-bottom: 1rpx solid #ebeff3;
+  font-size: 38rpx;
+  line-height: 120rpx;
+}
+
+.item_text_name {
+  width: 325rpx;
+  margin-left: 50rpx;
+}
+
+.item_number {
+  width: 100rpx;
+  height: 80rpx;
+  text-align: center;
+  color: #888;
+}
+
+.item_text_points {
+  width: 215rpx;
+  margin-right: 75rpx;
+  text-align: right;
+}
+
+.rule_desc {
+  margin-top: 30rpx;
+  width: 750rpx;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.rule_title {
+  width: 650rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+  font-size: 38rpx;
+}
+
+.rule_contents {
+  width: 650rpx;
+  min-height: 300rpx;
+  font-size: 36rpx;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+  line-height: 45rpx;
+  letter-spacing: 4rpx;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: #4bc1d2;
+  width: 130rpx;
+  color: white;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  margin-left: 100rpx;
+  font-size: 32rpx;
+}
+
+.edit-no {
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+}

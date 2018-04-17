@@ -1,0 +1,61 @@
+/* pages/addorder/addorder.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow:hidden;
+  border-top:1rpx solid #EBEFF3;
+}
+button{
+    font-size:40rpx;
+    height:100rpx;
+    line-height: 100rpx;
+    width:100%;
+    background-color:#4BC1D2;
+    position: fixed;
+    bottom: 0rpx;
+    text-align: center;
+    color:white;
+    border-radius: 0rpx;
+}
+.username{
+    height:100rpx;
+    line-height: 100rpx;
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    border-bottom:1rpx solid #D8D8D8;
+    background-color:white;
+}
+.name{
+    font-size:36rpx;
+    color:#000000;
+    flex:1;
+    margin-left:30rpx;
+    
+}
+.username input{
+    margin-top:25rpx;
+    margin-right:30rpx;
+    font-size:32rpx;
+    color:#888888;
+   text-align: right;
+    flex:2;
+    padding-left:10rpx;
+}
+.userpicker{
+    /*margin-right:30rpx;*/
+    font-size:32rpx;
+    color:#888888;
+   text-align: right;
+    width:400rpx;
+    margin-right:30rpx;
+    padding-left:10rpx;
+    flex:2;
+}
+.usergender{
+    display: none;
+}

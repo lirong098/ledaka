@@ -1,0 +1,30 @@
+<!--pages/reserprogram/reserprogram.wxml-->
+<scroll-view class="container" scroll-y="true" scroll-x="true">
+  <view class="nav">
+    <view id="{{navlrm}}" bindtap="bindnavmain">
+      <text class="{{navmaintext}}">{{navmain}}</text>
+    </view>
+    <view id="{{navlr}}" bindtap="bindnavleft">
+      <text class="{{navlefttext}}">{{navleft}}</text>
+    </view>
+    <view id="{{navlrs}}" bindtap="bindnavright">
+      <text class="{{navrighttext}}">{{navright}}</text>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+    <block wx:if ="{{nav_change == 2}}">
+      <navigator class="username" url="../choosestudio/choosestudio?studio_id={{studio_info.id}}">
+        <image class="icon" src="{{https}}{{studio_info.logo}}" style="border-radius: 10%;"></image>
+        <text class="name">{{studio_info.studio_name}}</text>
+        <text class="coach">工作室选择</text>
+        <image class="arrow" src="/images/jiantou.png"></image>
+      </navigator>
+    </block>
+    <include src="../navstudio/navstudio.wxml" wx:if="{{nav_change == 0}}" />
+    <include src="../nav/nav.wxml" wx:elif="{{nav_change == 1}}" />
+    <include src="../navstudio/navstudio.wxml" wx:else/>
+  </scroll-view>
+  <navigator class="add_program" url="addreserprogram/addreserprogram?Fdate={{nowDate}}&Fstarttime=08:00:00&Fendtime=09:00:00&coach_id={{coach_id}}&schedule_id=" wx:if="{{nav_change == 0}}">
+    <image src="/images/addprogram.png"></image>
+  </navigator>
+</scroll-view>

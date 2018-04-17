@@ -1,0 +1,165 @@
+/* pages/notificationlist/notificationlist.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /*background-color:#F7F9F8;*/
+  overflow:hidden;
+  /*border-top:4rpx solid #D8D8D8;*/
+} 
+.notice{
+  width:750rpx;
+  display:flex;
+  flex-direction: column;
+}
+.notice-title{
+  margin-top:6rpx;
+  margin-bottom:4rpx;
+  margin-left:30rpx;
+  font-size:36rpx;
+  color:#888888;
+}
+.notice-text{
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom:1rpx solid #D8D8D8;
+  background-color:white;
+  position: relative;
+  z-index: 2;
+}
+.viewbox{
+  position: relative;
+}
+.viewdelitem{
+  position: absolute;
+  right:0;
+  top:0;
+  height: 170rpx;
+  line-height: 170rpx;
+  text-align: center;
+  color:white;
+  width:180rpx;
+  z-index: 0;
+  background-color:red;
+}
+
+.userlcon{
+  width: 98rpx;
+  height: 98rpx;
+  margin-left:30rpx;
+  margin-right:20rpx;
+  border-radius: 10%;
+
+}
+.notice-text-img{
+  position: absolute;
+  left:120rpx;
+  top:27rpx;
+  width:20rpx;
+  height: 20rpx;
+  background-color: red;
+  border-radius: 50%;
+}
+.news{
+  height: 98rpx;
+  display: flex;
+  flex-direction: column;
+}
+.news_name{
+  display: flex;
+  flex-direction: row;
+  color:#353535;
+  width:570rpx;
+}
+.news_name_text{
+  width:400rpx;
+  font-size:36rpx;  
+}
+.news_name_week{
+  width:170rpx;
+  text-align: right;
+  font-size:32rpx;
+  color:#b2b2b2;
+}
+.news_text{
+  margin-top:8rpx;
+  color:#b2b2b2;
+  font-size:32rpx;
+}
+.notice view:last-child{
+  border:none;
+}
+.lesson{
+  width:750rpx;
+  display:flex;
+  flex-direction: column;
+  border-top:1rpx solid #D8D8D8;
+}
+.lesson-title{
+  margin-top:6rpx;
+  margin-bottom:4rpx;
+  margin-left:30rpx;
+  font-size:36rpx;
+  color:#888888;
+   /*border-bottom:1rpx solid #D8D8D8;*/
+}
+
+.lesson-text{
+  height: 170rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom:1rpx solid #D8D8D8;
+  border-top:1rpx solid #D8D8D8;
+  
+  background-color:white;
+  position: relative;
+  z-index: 2;
+}
+.viewbox{
+  position: relative;
+}
+.viewdelitem{
+  position: absolute;
+  right:0;
+  top:0;
+  height: 170rpx;
+  line-height: 170rpx;
+  text-align: center;
+  color:white;
+  width:180rpx;
+  z-index: 0;
+  background-color:red;
+}
+.les_name{
+  width:92%;
+  margin-top:35rpx;
+  display: flex;
+  flex-direction: row;
+  color:#353535;
+  
+}
+.les_name_text{
+  width:80%;
+  font-size:36rpx;
+}
+.les_name_week{
+  width:20%;
+  text-align: right;
+  font-size:30rpx;
+  color:#b2b2b2;
+}
+.les_text{
+  width:92%;
+  margin-top:8rpx;
+  color:#b2b2b2;
+  font-size:28rpx;
+}
+.lesson view:last-child{
+  border:none;
+}

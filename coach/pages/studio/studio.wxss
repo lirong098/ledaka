@@ -1,0 +1,147 @@
+/* pages/studio/studio.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-bottom:100rpx; 
+}
+
+.notice {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30rpx;
+}
+
+.notice-text {
+  height: 180rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+}
+
+.userlcon {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 30rpx;
+  border-radius: 10%;
+}
+
+.news {
+  height: 140rpx;
+  line-height: 70rpx;
+  display: flex;
+  flex-direction: column;
+  /*border:1rpx solid black;*/
+  width: 540rpx;
+}
+
+.news-top {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-left: 30rpx;
+  display: flex;
+  font-size: 40rpx;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.news-top text:nth-child(1) {
+  font-size: 36rpx;
+  width: 420rpx;
+  /*border:1rpx solid black;*/
+}
+
+.news-top text:nth-child(2) {
+  font-size: 34rpx;
+  width: 80rpx;
+  /*border:1rpx solid black;*/
+  margin-right: 15rpx;
+  text-align: right;
+  color: #888;
+}
+
+/*.news-top text:nth-child(3){
+    font-size:34rpx;
+    width:40rpx;
+    border:1rpx solid black;
+    margin-right:30rpx;
+    text-align: right;
+    color:#888888;
+}*/
+
+.news-middle {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 31rpx;
+  margin-left: 30rpx;
+  color: #888;
+  height: 50rpx;
+  overflow: hidden;
+}
+
+.news-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 11pt;
+  color: #888;
+}
+
+.news-bottom text:nth-child(1) {
+  width: 370rpx;
+  /*border:1rpx solid black;*/
+  color: #888;
+}
+
+.news-bottom text:nth-child(2) {
+  width: 190rpx;
+  /*border:1rpx solid black;*/
+  text-align: right;
+  margin-right: 30rpx;
+  /*margin-right:30rpx;*/
+  color: #888;
+}
+
+.arrow {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 25rpx;
+  margin-right: 20rpx;
+  text-align: right;
+}
+
+.footer {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  background-color: #4bc1d2;
+  position: fixed;
+  bottom: 0rpx;
+  /*display: flex;*/
+  font-size: 40rpx;
+  /*flex-direction: row;*/
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.edit {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+  background-color: #4bc1d2;
+  font-size: 40rpx;
+  align-items: center;
+  text-align: center;
+  color: white;
+}

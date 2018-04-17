@@ -1,0 +1,2 @@
+/* pages/studiomanage/bus/studentfrom/text/text.wxss */
+@import "../../../../coachrecordtext/coachrecordtext.wxss";

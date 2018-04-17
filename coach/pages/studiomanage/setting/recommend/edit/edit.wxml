@@ -1,0 +1,45 @@
+<!--edit.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="container">
+    <view class="logo">
+      <view class="tips_img weui-uploader__input-box">
+        <image class="logoimage" src="{{https}}{{source}}" bindtap="chooseImage" mode="aspectFill"></image>
+      </view>
+      <input name="logo" value="{{source}}" style="display:none;" />
+    </view>
+
+    <text class="tips">点击上传图片</text>
+
+    <view class="tips_title">活动标题</view>
+    <view class="title">
+      <input name="title" wx:if="{{info.title}}" class="ipt" placeholder="和你的朋友一起锻炼吧" value="{{info.title}}" />
+      <input name="title" wx:else class="ipt" placeholder="和你的朋友一起锻炼吧" value="和你的朋友一起锻炼吧" />
+    </view>
+
+    <view class="tips_title">活动内容</view>
+    <view class="content">
+      <view style="height:20rpx;"></view>
+
+      <textarea name="contents" wx:if="{{info.contents}}" class="area" placeholder="您知道和朋友一起锻炼的效果是单独锻炼的3倍吗？邀请您的朋友和您一起来锻炼吧。工作室将为您的朋友提供一节价值300元的免费体验课。送上您的祝福并转发您的朋友，享受和朋友一起锻炼的乐趣吧。" value="{{info.contents}}" />
+      <textarea name="contents" wx:else class="area" placeholder="您知道和朋友一起锻炼的效果是单独锻炼的3倍吗？邀请您的朋友和您一起来锻炼吧。工作室将为您的朋友提供一节价值300元的免费体验课。送上您的祝福并转发您的朋友，享受和朋友一起锻炼的乐趣吧。" value="您知道和朋友一起锻炼的效果是单独锻炼的3倍吗？邀请您的朋友和您一起来锻炼吧。工作室将为您的朋友提供一节价值300元的免费体验课。送上您的祝福并转发您的朋友，享受和朋友一起锻炼的乐趣吧。" />
+
+      <view style="height:20rpx;"></view>
+    </view>
+
+    <view class="tips_title">学员给朋友的祝福</view>
+    <view class="wish">
+      <view style="height:20rpx;"></view>
+      <textarea name="wish" wx:if="{{info.wish}}" class="wisharea" placeholder="我送你一节健身工作室的免费私教体验课。来和我们一起锻炼吧！" value="{{info.wish}}" />
+      <textarea name="wish" wx:else class="wisharea" placeholder="我送你一节健身工作室的免费私教体验课。来和我们一起锻炼吧！" value="我送你一节健身工作室的免费私教体验课。来和我们一起锻炼吧！" />
+      <view style="height:20rpx;"></view>
+    </view>
+
+  </view>
+
+  <!-- <button class="btn_left" bindtap="btnClickShare">进入转发页</button>
+  <button class="btn_right" formType="submit">保存</button> -->
+
+  <view class="edit-no">
+    <button formType="submit">保存并转发</button>
+  </view>
+</form>

@@ -1,0 +1,25 @@
+<!--addexchange.wxml-->
+<form bindsubmit="formSubmit">
+  <view class="container">
+
+    <view class="item">
+      <text class="name">项目名称</text>
+      <input name="name" placeholder-style="color:#b5b5b5;" placeholder="请输入项目名称" value="{{rulename}}" />
+    </view>
+    <view class="item">
+      <text class="name">类型</text>
+      <picker name="type" class="value" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view>{{array[index]}}</view>
+      </picker>
+    </view>
+    <view class="item">
+      <text class="name">兑换积分</text>
+      <input name="points" type="number" placeholder-style="color:#b5b5b5;" placeholder="请输入消耗积分" value="{{points}}" />
+    </view>
+
+  </view>
+
+  <view class="edit-button">
+    <button formType="submit">{{btnname}}</button>
+  </view>
+</form>

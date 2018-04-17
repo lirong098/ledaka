@@ -1,0 +1,34 @@
+<!--edit.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <scroll-view class="container" scroll-y="true">
+
+    <picker mode="date" value="{{stardate}}" start="2016-01-01" end="2040-12-31" bindchange="bindstartChange">
+      <view class="username">
+        <text class="name">{{startdate}}</text>
+        <text class="userpicker">{{stardate}}</text>
+        <input class="usergender" name="startdate" value="{{stardate}}" disabled="true" />
+      </view>
+    </picker>
+
+    <picker mode="date" value="{{endate}}" start="2016-01-01" end="2040-12-31" bindchange="bindendChange">
+      <view class="username">
+        <text class="name">{{enddate}}</text>
+        <text class="userpicker">{{endate}}</text>
+        <input class="usergender" name="enddate" value="{{endate}}" disabled="true" />
+      </view>
+    </picker>
+
+    <view class="username">
+      <text class="name">{{goods_number}}</text>
+      <input type="number" name="goods_number" value="{{good_number}}" />
+    </view>
+
+    <view class="username">
+      <text class="name">{{goods_use}}</text>
+      <input type="number" name="goods_use" value="{{good_use}}" placeholder="0" />
+    </view>
+
+  </scroll-view>
+  <input class="usergender" name="seorder_id" value="{{seorder_id}}" />
+  <button formType="submit">修改</button>
+</form>

@@ -1,0 +1,368 @@
+/* pages/studentinfo/studentinfo.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  /*background-color:#F7F9F8;
+  border-top:1rpx solid #D8D8D8;*//* margin-bottom: 10rpx;  */
+}
+
+.notice-text {
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+  margin-bottom: 40rpx;
+}
+
+.userlcon {
+  width: 120rpx;
+  height: 120rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+}
+
+.news {
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  /*border:1rpx solid black;*/
+}
+
+.news-top {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  line-height: 65rpx;
+}
+
+.news-top text:nth-child(1) {
+  font-size: 40rpx;
+  width: 420rpx;
+  /*border:1rpx solid black;*/
+}
+
+.news-top text:nth-child(2) {
+  font-size: 32rpx;
+  width: 80rpx;
+  /*border:1rpx solid black;*/
+  margin-right: 15rpx;
+  text-align: right;
+  color: #b2b2b2;
+}
+
+.news-top text:nth-child(3) {
+  font-size: 32rpx;
+  width: 40rpx;
+  /*border:1rpx solid black;*/
+  margin-right: 30rpx;
+  text-align: right;
+  color: #b2b2b2;
+}
+
+.news-middle {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 32rpx;
+  color: #b2b2b2;
+  margin-top: 10rpx;
+}
+
+.news_middle_text2 {
+  margin-right: 30rpx;
+}
+
+.username {
+  height: 110rpx;
+  line-height: 110rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+.arrow {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 43rpx;
+  margin-left: 20rpx;
+  margin-right: 30rpx;
+}
+
+.name {
+  font-size: 36rpx;
+  color: #000;
+  width: 295rpx;
+  margin-left: 40rpx;
+}
+
+.namex {
+  font-size: 36rpx;
+  color: #000;
+  width: 265rpx;
+  margin-left: 40rpx;
+}
+
+.username input {
+  text-align: right;
+  align-self: flex-start;
+  width: 310rpx;
+  height: 100%;
+  font-size: 36rpx;
+  color: #888;
+  padding-right: 0rpx;
+}
+
+.brithd {
+  text-align: right;
+  width: 350rpx;
+  font-size: 36rpx;
+  color: #888;
+  margin-right: 30rpx;
+}
+
+.stu {
+  text-align: right;
+  width: 350rpx;
+  font-size: 36rpx;
+  color: #888;
+  margin-right: 30rpx;
+}
+
+.footer {
+  background-color: #4bc1d2;
+  /* position: fixed; */
+  bottom: 0rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+  margin-top: 36rpx;
+}
+
+.username1 {
+  height: 110rpx;
+  line-height: 110rpx;
+  width: 750rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+  overflow: hidden;
+}
+
+.username2 {
+  height: 150rpx;
+  line-height: 110rpx;
+  width: 750rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+  overflow: hidden;
+  border: 1rpx solid red;
+  position: relative;
+}
+
+.icon1 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  display: inline-block;
+  float: left;
+}
+
+.icon2 {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+  margin-top: 0rpx;
+  display: inline-block;
+  float: left;
+}
+
+.arrow1 {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 43rpx;
+  margin-right: 30rpx;
+  float: right;
+}
+
+.arrow2 {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 43rpx;
+  margin-right: 0rpx;
+  float: right;
+}
+
+.name1 {
+  font-size: 36rpx;
+  color: #000;
+  width: 295rpx;
+  margin-left: 40rpx;
+  display: inline-block;
+  float: left;
+}
+
+.name2 {
+  position: absolute;
+  top: -10rpx;
+  right: 10rpx;
+  font-size: 36rpx;
+  color: #000;
+  width: 180rpx;
+  /* margin-right: 40rpx;  */
+  display: inline-block;
+  border: 1rpx solid red;
+}
+
+.text_info {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+  width: 195rpx;
+  float: right;
+  text-align: right;
+  color: #888;
+}
+
+/* pages/recordtrainess/recordtrainess.wxss */
+
+.container {
+  height: 100%;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.remark {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.remark_top {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #d8d8d8;
+}
+
+.remark_top_text {
+  flex: 4;
+  /* border-bottom: 1rpx solid #d8d8d8; */
+  margin-left: 30rpx;
+  /* font-weight: bold; *//* color: black; */
+}
+
+.remark_top_button {
+  flex: 1;
+  /* border-bottom: 1rpx solid #d8d8d8; */
+  text-align: right;
+  margin-right: 30rpx;
+  color: #4bc1d2;
+  height: 100%;
+}
+
+.remark_bottom {
+  margin: 20rpx 30rpx 20rpx 30rpx;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  /* border: 1rpx solid red; *//* width:680rpx;  */
+  word-break: break-all;
+  overflow-x: hidden;
+}
+
+.from {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.from_top {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.from_icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 30rpx;
+}
+
+.from_top text:nth-child(2) {
+  margin-left: 40rpx;
+  flex: 1;
+}
+
+.from_top text:nth-child(3) {
+  align-self: flex-end;
+  margin-right: 30rpx;
+  color: #888;
+  font-size: 36rpx;
+}
+
+.from_bottom {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.from_bottom image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 10rpx;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx;
+}
+
+.from_bottom text {
+  margin-left: 30rpx;
+  line-height: 45rpx;
+  flex: 1;
+  text-align: right;
+  font-size: 36rpx;
+  color: #888;
+}

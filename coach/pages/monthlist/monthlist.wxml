@@ -1,0 +1,29 @@
+<!--pages/monthlist/monthlist.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <include src="../column/column.wxml" />
+  <view class="container_title">
+    <view class="container_title_top" bindtap="bindtopweek">
+      <image class="icon" src="/images/lt.png"></image>上月
+    </view>
+    <view class="container_title_datetime">
+      {{weekend}}
+    </view>
+    <view class="container_title_bottom" bindtap="bindbottomweek">
+      <text style="margin-right:3rpx;">下月</text>
+      <image class="icon" src="/images/gt.png"></image>
+    </view>
+  </view>
+  <!--star notice-->
+  <view class="notice">
+    <view wx:for="{{recordlist}}">
+      <navigator class="notice_text" url="../monthlistinfo/monthlistinfo?trainee_id={{item.trainee_id}}&yearweek1={{yearweek1}}">
+        <image class="notice_text_img" src="{{item.picture}}"></image>
+        <text class="notice_text_name">{{item.trainee_name}}</text>
+        <view class="notice_text_lesson">{{item.count}}</view>
+        <view class="notice_text_date">{{item.count3}}</view>
+        <image class="arrow" src="/images/arrow.png"></image>
+      </navigator>
+    </view>
+  </view>
+  <!--end notice-->
+</scroll-view>

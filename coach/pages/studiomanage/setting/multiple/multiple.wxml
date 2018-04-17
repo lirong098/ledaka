@@ -1,0 +1,24 @@
+<!--multiple.wxml-->
+<text>multiple.wxml</text>
+<scroll-view class="container" scroll-y="true" style="height:{{boxheight}}">
+  <view style="width:750rpx;height:40rpx;"></view>
+
+  <checkbox-group bindchange="checkboxChange">
+    <view class="item_class" wx:for="{{studioinfo}}" wx:for-item="item">
+      <image class="item_class_img" src="{{https}}{{item.logo}}" style="border-radius: 10%;"></image>
+      <text class="item_text_name">{{item.studio_name}}</text>
+      <checkbox class="item_checkbox" value="{{item.id}}" checked="{{item.checked}}" />
+    </view>
+  </checkbox-group>
+
+</scroll-view>
+
+<view class="title">
+  <view class="box_right">
+    <text class="text_title">连锁</text>
+  </view>
+</view>
+
+<view class="edit-no">
+  <button bindtap="clicksave">保存</button>
+</view>

@@ -1,0 +1,118 @@
+/* pages/navstudio/navstudio.wxss */
+.nav-title{
+    width:750rpx;
+    height: 100rpx;
+    background-color:#F2F2F2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom:1rpx solid #D8D8D8;
+}
+.nav-title-left{
+    width:86.25rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1rpx solid #D8D8D8;
+}
+.nav-title-left image{
+    width:50rpx;
+    height:50rpx;
+    margin-top:10rpx;
+    margin-left:-2rpx;
+}
+.nav-title-left text{
+    width:80rpx;
+    font-size: 28rpx;
+    text-align: center;
+}
+.nav-title-right-top{
+    width:663rpx;
+    height: 100rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-title-right-top navigator{
+    /*flex:1;*/
+    flex:1;
+    text-align: center;
+    height: 81rpx;
+    display: flex;
+    font-size: 28rpx;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+ 
+.nav-text-top{
+    width:40rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    background-color: #4bc1d2;
+    color:white;
+    border-radius: 50%;
+    text-align: center;    
+}
+.navstudio{
+  width: 750rpx;
+  display: flex;
+  height: 130rpx;
+  line-height: 130rpx;
+  flex-direction: row;
+  align-items: center;
+  border-bottom:1rpx solid #D8D8D8;
+  overflow: hidden;
+  font-size: 32rpx;
+  background-color: #ebeff3;
+}
+.navstudio:last-child {
+  margin-bottom: 102rpx;
+}
+.navstudio_date{
+  width:220rpx;
+  margin-left:30rpx;
+  overflow: hidden;
+  color:#353535;
+  height: 130rpx;
+  line-height: 130rpx;
+}
+.navstudio_name{
+  flex:1;
+  overflow: hidden;
+  color:#b2b2b2;
+  height: 130rpx;
+  line-height: 130rpx;
+  margin-left:30rpx;
+}
+.navstudio_program{
+  flex:1;
+  margin-right:30rpx;
+  overflow: hidden;
+  text-align: right;
+  color:#b2b2b2;
+  line-height: 45rpx;
+  font-size:32rpx;
+  display: flex;
+  flex-direction:column; 
+}
+.navstudio_program text:nth-child(2){
+  color:red;
+}
+.current_date{
+  position:absolute;
+  left:0rpx;
+  top:-5rpx;
+  width:80rpx;
+  height:80rpx;
+  line-height: 40rpx;
+  border-radius: 50%;
+  background-color: #F7F8F9;
+  border:5rpx solid #4bc1d2;
+  color:#4bc1d2;
+  display: flex;
+  flex-direction:column;
+  align-items: center; 
+  font-weight: bold;
+}

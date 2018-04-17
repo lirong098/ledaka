@@ -1,0 +1,70 @@
+/* pages/card/card.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  /*background-color:#F7F9F8;*//*border-top:1rpx solid #D8D8D8;*/
+}
+
+.viewbox {
+  position: relative;
+}
+
+.viewdelitem {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: white;
+  width: 140rpx;
+  z-index: 0;
+  background-color: red;
+}
+
+.view_text {
+  width: 700rpx;
+}
+
+.username {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+  font-size: 36rpx;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+}
+
+.arrow {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 34rpx;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+}
+
+.name {
+  margin-left: 30rpx;
+}
+
+.footer {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  background-color: #4bc1d2;
+  position: fixed;
+  bottom: 0rpx;
+  text-align: center;
+  color: white;
+  border-radius: 5rpx;
+}

@@ -1,0 +1,18 @@
+button {
+  margin: 0;
+  padding: 0;
+  background-color: #4bc1d2;
+  width: 100%;
+  color: white;
+  font-size: 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 0rpx;
+  text-align: center;
+}
+
+.edit-button {
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+}

@@ -1,0 +1,48 @@
+<!--pages/programinfo/programinfo.wxml-->
+<scroll-view class="container" scroll-y="true">
+
+  <view class="logo">
+    <image class="logoimage" src="{{https}}{{source}}" mode="aspectFill"></image>
+  </view>
+
+  <view class="item_class" bindtap="navigateTo">
+    <image class="item_class_img" src="{{coach.picture}}" style="border-radius: 10%;"></image>
+    <view class="item_contents">
+      <text class="item_text_name">{{coach.coach_name}}</text>
+      <text class="item_text_desc" >{{coach.expertise}}</text>
+    </view>
+  </view>
+
+  <view class="classname">
+    <text>{{program.program_name}}</text>
+  </view>
+
+  <view class="introduce">
+    <text>{{program.introduction}}</text>
+  </view>
+
+  <view class="images">
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for-items="{{files}}" wx:key="{{index}}">
+                  <view class="weui-uploader__file" id="{{https}}{{item}}">
+                    <image class="weui-uploader__img" src="{{https}}{{item}}" mode="aspectFill" bindtap="previewImage" data-src="{{https}}{{item}}" />
+                  </view>
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>
+<button class="one" bindtap="btnClick" wx:if="{{ismyclass == 1}}">修改</button>
+<!--<button class="left" bindtap="btnClick" wx:if="{{ismyclass == 1}}">修改</button>
+<button class="right" open-type="share" bindtap="onShare" wx:if="{{ismyclass == 1}}">分享</button>
+<button class="one" open-type="share" bindtap="onShare" wx:if="{{ismyclass == 0}}">分享</button>-->

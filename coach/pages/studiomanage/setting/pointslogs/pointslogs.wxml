@@ -1,0 +1,46 @@
+<!--pointslogs.wxml-->
+<scroll-view class="container" scroll-y="true" style="height:{{boxheight}}">
+  <view class="swiper-title-blue">
+    <view class="swiper-tab-blue">
+      <view class="swiper-tab-list-blue {{currentTab==0 ? 'on-blue' : 'other-blue'}}" data-current="0" bindtap="swichNav">
+        积分获得
+        <view class="on-blue-line" style="left: 85rpx;"></view>
+      </view>
+      <view class="swiper-tab-list-blue {{currentTab==1 ? 'on-blue' : 'other-blue'}}" data-current="1" bindtap="swichNav">
+        积分兑换
+        <view class="on-blue-line" style="left: 460rpx;"></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="contents {{currentTab==0 ? '' : 'ondisplay'}}">
+
+    <view class="item_class" wx:for="{{getlist}}" wx:for-item="item">
+      <view class="box_one">
+        <text class="item_text_time">{{item.createtime}}</text>
+        <text class="item_text_name">{{item.trainee_name}}</text>
+        <text class="item_text_name">{{item.name}}</text>
+        <text class="item_text_point">+{{item.point}}</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="contents {{currentTab==1 ? '' : 'ondisplay'}}">
+
+    <view class="item_class" wx:for="{{costlist}}" wx:for-item="item">
+      <view class="box_one">
+        <text class="item_text_time">{{item.createtime}}</text>
+        <text class="item_text_name">{{item.trainee_name}}</text>
+        <text class="item_text_name">{{item.name}}</text>
+        <text class="item_text_point">-{{item.point}}</text>
+      </view>
+      <view class="box_two">
+        <text class="item_tips" wx:if="{{item.status == 1}}">已使用</text>
+        <text class="item_tips" wx:else>未使用</text>
+      </view>
+    </view>
+
+  </view>
+
+</scroll-view>

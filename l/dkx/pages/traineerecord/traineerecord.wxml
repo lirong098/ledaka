@@ -1,0 +1,15 @@
+<!--pages/motorgroup/traineerecord/traineerecord.wxml-->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="loadMore">
+    <view   class="userinfo">
+          <image class="userinfo-avatar" src="{{trainee_info.picture}}" background-size="cover"></image>
+          <view class="userinfo-text">
+              <text class="userinfo-nickname">{{trainee_info.trainee_name}}</text>
+              <view class="userinfo-plus">
+                  <text class="studentqty">{{trainee_info.motto}}</text>
+              </view>
+          </view>
+    </view>
+    <view class="main">
+        <include src="../notice/notice.wxml" />
+    </view>
+</scroll-view>

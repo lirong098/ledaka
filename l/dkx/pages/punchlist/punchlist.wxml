@@ -1,0 +1,33 @@
+<!--pages/punchlist/punchlist.wxml-->
+<scroll-view class="container" scroll-y="true">
+    <view class="container_title">
+        <view class="container_title_top" bindtap="bindtopweek">
+            ‹上月
+        </view>
+        <view class="container_title_datetime">
+            {{weekend}}
+        </view>
+        <view class="container_title_bottom" bindtap="bindbottomweek">下月›</view>
+    </view>
+
+    <!--star notice-->
+    <view class="notice" >
+            <view class="notice_main" >
+                <image class="notice_text_img"></image>
+                <view class="notice_text_name"></view>
+                <view class="notice_text_lesson">打卡</view>
+                <view class="notice_text_date">取消预约</view>
+                <image class="arrow"></image>
+            </view>
+        <view wx:for="{{recordlist}}">
+            <navigator class="notice_text" url="../recordtext/recordtext?record_id={{item.id}}">
+                <view class="notice_text_img" style="{{item.style}}">{{item.status_text}}</view>
+                <view class="notice_text_name">{{item.program_name}}</view>
+                <view class="notice_text_lesson">{{item.class_date}}</view>
+                <view class="notice_text_date">{{item.comments}} </view>
+                <image class="arrow" src="/images/arrow.png"></image>
+            </navigator>
+        </view>
+    </view>
+    <!--end notice-->
+</scroll-view>

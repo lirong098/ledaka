@@ -1,0 +1,35 @@
+<!--pages/addorder/addorder.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <scroll-view class="container" scroll-y="true">
+    <view class="username">
+      <text class="name">{{lesson}}</text>
+      <text class="userpicker">{{program_name}}</text>
+    </view>
+    <view class="username">
+      <text class="name">{{card}}</text>
+      <text class="userpicker">{{card_name}}</text>
+    </view>
+    <view class="username">
+      <text class="name">{{startdate}}</text>
+      <text class="userpicker">{{stardate}}</text>
+      <input class="usergender" name="startdate" value="{{stardate}}" disabled="true" />
+    </view>
+    <view class="username">
+      <text class="name">{{enddate}}</text>
+      <text class="userpicker">{{endate}}</text>
+      <input class="usergender" name="enddate" value="{{endate}}" disabled="true" />
+    </view>
+    <view class="username">
+      <text class="name">{{goods_number}}</text>
+      <input type="number" name="goods_number" value="{{good_number}}" />
+    </view>
+    <view class="username">
+      <text class="name">{{goods_use}}</text>
+      <input name="goods_use" value="{{good_use}}" />
+    </view>
+    <view class="username">
+      <text class="name">{{studio}}</text>
+      <text class="userpicker">{{studio_name}}</text>
+    </view>
+  </scroll-view>
+</form>

@@ -1,0 +1,35 @@
+<!--shareinfo.wxml-->
+<scroll-view class="container" scroll-y="true">
+
+  <view class="content">
+    <view class="logo">
+      <image class="logoimage" src="{{https}}{{source}}" mode="aspectFill"></image>
+    </view>
+
+    <view class="title">
+      <text>{{info.title}}</text>
+    </view>
+
+    <view class="introduce">
+      <text>{{info.contents}}</text>
+    </view>
+    
+    <view style="height:30rpx;"></view>
+  </view>
+
+  <!-- <view class="tips_title">第一步：写下你的祝福</view>
+  <view class="wish">
+    <input class="ipt" bindblur="bindblur" placeholder="{{info.wish}}" value="{{wish}}" />
+  </view>
+
+  <view class="tips_title">第二步：</view> -->
+
+</scroll-view>
+
+<!-- <view class="edit-no" wx:if="{{isfrom == 'coach'}}">
+  <button open-type="share">转发给学员</button>
+</view>  -->
+<view class="edit-no">
+  <button wx:if="{{isfrom == 'coach'}}" open-type="share">转发给学员</button>
+  <button wx:else bindtap="clicksure">去邀请朋友</button>
+</view>

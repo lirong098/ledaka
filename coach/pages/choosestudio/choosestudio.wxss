@@ -1,0 +1,45 @@
+/* choosestudio.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 4rpx solid #d8d8d8;
+  background-color: #f7f9f8;
+}
+
+.username {
+  height: 130rpx;
+  line-height: 130rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+}
+
+.icon {
+  width: 85rpx;
+  height: 85rpx;
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+  align-self: flex-start;
+}
+
+.arrow {
+  align-self: flex-end;
+  margin-right: 30rpx;
+  /*color:#4bc1d2;*//*border:1rpx solid red;*/
+}
+
+.name {
+  font-size: 36rpx;
+  color: #000;
+  margin-left: 15rpx;
+  align-self: flex-start;
+  flex: 1;
+}

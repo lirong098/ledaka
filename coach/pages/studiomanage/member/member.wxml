@@ -1,0 +1,74 @@
+<!--member.wxml-->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="loadMore">
+
+  <view class="nav">
+    <view class="nav_button" style="{{item.left}}" wx:for="{{nav}}" data-index="{{index}}" bindtap="bindnavchange">
+      <text class="{{msg == item.id ? 'blue' : ''}} nav_button_text" style="height:66rpx;line-height:66rpx;">{{item.nav_name}}</text>
+      <text class="{{msg == item.id ? 'blue' : 'other'}}" style="font-size:32rpx;">{{item.qty}}</text>
+      <view class="nav_button_view" style="{{item.bottom}}"></view>
+    </view>
+  </view>
+  <!--<view class="main" wx:for="{{array}}" wx:for-index="idx">-->
+
+  <view class="tips">
+    <text class="main_text_tips1" wx:if="{{msg == 0}}">余课</text>
+    <text class="main_text_tips2" wx:elif="{{msg == 1}}">最后上课日期</text>
+    <text class="main_text_tips2" wx:elif="{{msg == 2}}">体验课日期</text>
+    <text class="main_text_tips2" wx:elif="{{msg == 3}}">注册日期</text>
+
+    <text class="main_text_tips3" wx:if="{{msg == 0}}">教练</text>
+    <text class="main_text_tips4" wx:elif="{{msg == 1 || msg == 2}}">教练</text>
+  </view>
+
+  <navigator class="main-text" url="../../studentinfo/studentinfo?id={{v.trainee_id}}&studio_id={{studio_id}}" wx:for="{{array}}" wx:for-item="v">
+     <image class="main-text-img" src="{{v.picture}}"></image> 
+    <text class="main_text_text" style="overflow:hidden;font-size:32rpx;width:100rpx;">{{v.trainee_name}}</text>
+    <text class="main_text_text3" style="width:240rpx;font-size:32rpx;overflow:hidden;color:#b2b2b2;margin-left:10rpx;margin-right:10rpx;">{{v.coach_name}}</text>
+    <text class="main_text_text4" style="text-align:right;font-size:32rpx;overflow:hidden;" wx:if="{{msg == 0}}">{{v.goods_number - v.goods_use}}/{{v.goods_number}}</text>
+    <text class="main_text_text2"style="font-size:32rpx;" wx:else>{{v.create_time}}</text>
+  </navigator>
+
+  <!--</view>-->
+  <view style="width:750rpx;height:120rpx;"></view>
+</scroll-view>
+
+<view class="title">
+  <view class="swiper-tab-blue">
+    <view class="swiper-tab-list-blue other-blue" data-current="0" bindtap="swichNav">
+      <view class="box_left">
+        <view class="box_left_img">
+          <image class="img" src="/images/Statistics1.png"></image>
+        </view>
+        <text class="text_title">统计</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+    <view class="swiper-tab-list-blue on-blue" data-current="1">
+      <view class="box_center">
+        <view class="box_left_img">
+          <image class="img" src="/images/member1.png"></image>
+        </view>
+        <text class="text_title">会员</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+    <view class="swiper-tab-list-blue other-blue" data-current="3" bindtap="swichNav">
+      <view class="box_center">
+        <view class="box_left_img">
+          <image class="img" src="/images/bus.png"></image>
+        </view>
+        <text class="text_title">商机</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+    <view class="swiper-tab-list-blue other-blue" data-current="2" bindtap="swichNav">
+      <view class="box_right">
+        <view class="box_left_img">
+          <image class="img" src="/images/setup1.png"></image>
+        </view>
+        <text class="text_title">设置</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+  </view>
+</view>

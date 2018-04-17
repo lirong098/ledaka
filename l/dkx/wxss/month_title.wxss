@@ -1,0 +1,27 @@
+.container_title {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebeff3;
+  /*margin-top: 320rpx;*/
+}
+.container_title_top {
+  margin-left: 60rpx;
+  color: #4bc2d6;
+  font-size: 36rpx;
+  width: 190rpx;
+}
+.icon {
+  width: 28rpx;
+  height: 28rpx;
+}
+.container_title_bottom {
+  margin-right: 60rpx;
+  color: #4bc2d6;
+  font-size: 36rpx;
+  width: 190rpx;
+  text-align: right;
+}

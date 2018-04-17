@@ -1,0 +1,14 @@
+<!--pages/usercoach/usercoach.wxml-->
+<scroll-view class="container" scroll-y="true">
+    <view class="viewbox" wx:for="{{array}}">
+      <navigator hover-class="none" class="notice-text" url="../mycoachinfo/mycoachinfo?coach_id={{item.id}}"bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}"> 
+            <image class="userlcon" src="{{item.picture}}" style="border-radius: 10%;"></image>
+            <text class="notice_text_name">{{item.coach_name}}</text>
+            <!--<text>{{item.id}}</text>-->
+      </navigator>
+          <view class="viewdelitem" bindtap = "delItem" data-index="{{index}}">删除</view>
+    </view>
+</scroll-view>
+<!--<view class="footer">
+    <navigator url="../addcoach/addcoach" class="footer-left" >新增教练</navigator>
+</view>-->

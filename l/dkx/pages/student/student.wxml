@@ -1,0 +1,38 @@
+<!--pages/student/student.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="title">
+    <view class="title_top">
+      <text class="lesson">{{schedule['program_name']}}</text>
+      <text class="student_qty">{{schedule.coach_name}}</text>
+    </view>
+    <view class="title_bottom">
+      <text class="title_bottom_left">{{schedule['class_date']}}{{schedule['start_time']}}{{schedule['end_time']}}</text>
+      <text class="student_qty">限{{schedule['maximum_attendants']}}人</text>
+    </view>
+    <view class="title_bottom">
+      <text class="title_bottom_left">{{schedule['studio_name']}}</text>
+    </view>
+  </view>
+  <view class="notice-text" wx:for="{{trainee}}">
+    <image class="userlcon" src="{{item.trainee_picture}}"></image>
+    <text class="notice_text_one">{{item.trainee_name}}</text>
+    <text class="notice_text_tow">{{item.trainee_company}}</text>
+    <text class="notice_text_san" style="color:{{item.styleclass}};">{{item.attendent_status}}</text>
+  </view>
+</scroll-view>
+<view wx:if="{{isfrom == 'coach'}}">
+  <view class="footer">
+    <button class="footer-left" style="color:#fff" open-type="share">发送给学员</button>
+  </view>
+</view>
+<view wx:else>
+  <view class="footer" wx:if="{{Fifstatus ==1}}">
+    <block wx:if="{{status == 1}}">
+      <view class="footer-left" bindtap="{{bindname}}" data-id="{{reserprogram}}">{{reserprogram}}</view>
+    </block>
+    <block wx:else>
+      <view class="footer-left" bindtap="{{bindrecord}}">{{record}}</view>
+      <view class="footer-right" bindtap="{{bindname}}">{{reserprogram}}</view>
+    </block>
+  </view>
+</view>

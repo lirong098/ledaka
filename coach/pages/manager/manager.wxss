@@ -1,0 +1,69 @@
+/* pages/manager/manager.wxss */
+@import "../../utils/traineelist/traineelist.wxss";
+@import "../../utils/searchbar/searchbar.wxss";
+
+.TraNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  height: 46px;
+  background-color: white;
+  line-height: 46px;
+  border-top: 1rpx solid #d8d8d8;
+  color: #4bc1d2;
+}
+
+.TraNav_left {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 36rpx;
+}
+
+.TraNav_left:nth-child(1) {
+  border-right: 1rpx solid #b2b2b2;
+}
+
+.TraNav_left image {
+  height: 18px;
+  width: 18px;
+  margin-right: 20rpx;
+}
+
+.TraNav_left_bottom {
+  height: 7rpx;
+  background-color: #4bc1d2;
+  width: 200rpx;
+  position: absolute;
+  bottom: -1rpx;
+}
+
+.TraNav_right {
+  height: 100%;
+  line-height: 47px;
+  width: 250rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-left: 1rpx solid #b2b2b2;
+  font-size: 36rpx;
+}
+
+.TraNav_right image {
+  height: 18px;
+  width: 18px;
+  margin-right: 20rpx;
+}
+
+.weui-icon-search {
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}

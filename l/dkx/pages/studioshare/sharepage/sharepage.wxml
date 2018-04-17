@@ -1,0 +1,42 @@
+<!--sharepage.wxml-->
+<view class="container">
+  <view class="headinfo">
+
+    <view class="share">
+      <image class="headimage" src="{{trainee.picture}}" mode="aspectFill"></image>
+      <text class="sharename">{{trainee.trainee_name}}</text>
+    </view>
+
+    <text class="sharewish">{{wish}}</text>
+  </view>
+
+  <view class="studioinfo">
+    <view class="studio">
+      <image class="userlcon" src="{{https}}{{studio.logo}}" style="border-radius:10%;"></image>
+      <view class="news">
+        <view class="news-top">
+          <text>{{studio.studio_name}}</text>
+        </view>
+        <view class="news-middle">
+          <text>{{studio.address}}</text>
+        </view>
+      </view>
+    </view>
+
+     <view class="video">
+      <video style="width:750rpx;height:360rpx;" src="{{src}}"></video>
+    </view> 
+    <navigator class="nav" url="/pages/studioinfo/studioinfo?id={{studio_id}}&fromid={{trainee_id}}&ishare=1">
+      <text class="urltext">查看工作室详细介绍  ></text>
+    </navigator>
+
+  </view>
+
+</view>
+
+<view class="edit-no" wx:if="{{ishare == 1}}">
+  <button open-type="share">分享给朋友</button>
+</view>
+<view class="edit-no" wx:if="{{ishare != 1}}">
+  <button bindtap="joinclass">报名体验课</button>
+</view>

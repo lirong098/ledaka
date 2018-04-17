@@ -1,0 +1,66 @@
+/* pages/motorgroup/motorgrouplist/motorgrouplist.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1rpx solid #d8d8d8;
+  background-color: #ebeff3;
+  /*margin-bottom:100rpx;*/
+}
+
+.nav {
+  height: 100rpx;
+  /*width:750rpx;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+.navl {
+  height: 100rpx;
+  line-height: 94rpx;
+  /*margin-left:160rpx;
+    margin-right:90rpx;*/
+  font-size: 36rpx;
+  color: #4ac0d2;
+  flex: 1;
+  background-color: white;
+}
+
+.nav-left-view {
+  height: 6rpx;
+  /*width:160rpx;*/
+  background-color: #4ac0d2;
+}
+
+.navr {
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 94rpx;
+  text-align: center;
+  color: #353535;
+  flex: 1;
+  background-color: #ebeff3;
+}
+
+.nav-right-view {
+  height: 6rpx;
+  /*width:160rpx;*/
+  background-color: #4ac0d2;
+}
+
+.navrighttext {
+  color: #888;
+}
+
+.navlefttext {
+  color: #4ac0d2;
+}
+@import "../traineelist.wxss";
+@import "../traineephoto.wxss";

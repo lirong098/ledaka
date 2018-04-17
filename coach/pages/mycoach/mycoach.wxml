@@ -1,0 +1,11 @@
+<!--pages/mycoach/mycoach.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="username" wx:for="{{array}}">
+          <image class="icon" src="{{item.picture}}"></image>
+          <text class="name">{{item.coach_name}}{{item.studio_name}}</text>
+          <text class="coach">教练选择</text>
+          <radio class="arrow" value="{{item.id}}" checked="{{item.checked}}"/>
+    </label>
+  </radio-group>
+</scroll-view>

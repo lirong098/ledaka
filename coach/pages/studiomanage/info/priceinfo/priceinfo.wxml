@@ -1,0 +1,31 @@
+<!--pages/studiomanage/info/priceinfo/priceinfo.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="contents">
+    <view class="title" style="margin-left:0rpx;height:350rpx;" wx:for="{{seorder}}">
+      <view class="title_head">
+        <image class="logo" src="{{item.picture}}" mode="aspectFill"></image>
+        <text class="studio_name">{{item.trainee_name}}</text>
+        <text class="card_name"></text>
+      </view>
+      <view class="title_contents">
+        <view class="title_contents_l">
+          <text>类型： </text>
+          <text>教练： </text>
+          <!--<text>有效期： </text>-->
+          <text>金额（元）： </text>
+          <text>总课程数： </text>
+          <!--<text>剩余： </text>-->
+        </view>
+        <view class="title_contents_r">
+          <text>{{item.card_name}}</text>
+          <text>{{item.coach_name}}</text>
+          <!--<text>{{item.start_date}} 至 {{item.expiration_date}}</text>-->
+          <text>{{item.goods_price}}</text>
+          <text>{{item.goods_number}}</text>
+          <!--<text>{{item.goods_sub}}</text>-->
+        </view>
+      </view>
+    </view>
+    <view style="height:20rpx;"></view>
+  </view>
+</scroll-view>

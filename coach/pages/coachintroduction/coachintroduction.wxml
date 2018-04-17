@@ -1,0 +1,10 @@
+<!--pages/coachintroduction/coachintroduction.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="container">
+    <view class="main">
+          <textarea class="main_text" value="{{coach_introduction}}" fixed="true" placeholder="请输入你的个人介绍、资历、荣誉及其他相关信息" placeholder-style="color:#b5b5b5;" name="name" style="font-size:36rpx;"maxlength ="300"></textarea>
+          <text class="main_text1">限300字</text>
+    </view>
+</view>
+<button formType="submit">保存</button>
+ </form>

@@ -1,0 +1,26 @@
+/* pages/expertise/expertise.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow:hidden;
+}
+input{
+    width:690rpx;
+    border-bottom:1rpx solid #5AC8D8;
+    margin-bottom:40rpx;
+    margin-top:40rpx;
+}
+button{
+   background-color:#4BC1D2;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    border-radius: 0rpx;
+    color:white;
+    font-size:40rpx;
+    margin-left:-30rpx;
+}

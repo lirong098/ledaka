@@ -1,0 +1,152 @@
+/* pages/studiomanage/bus/bus.wxss */
+@import "../studiomanage.wxss";
+@import "../../../utils/traineelist/traineelist.wxss";
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  height: 130rpx;
+}
+
+.nav_button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.nav_button:nth-child(1){
+  margin-left:30rpx; 
+}
+.nav_button:nth-child(2){
+  margin-right:30rpx;
+}
+
+.nav_button_text {
+  flex: 1;
+  margin-top: 10rpx;
+  text-align: center;
+  color: #b2b2b2;
+}
+
+.nav_button_view {
+  height: 6rpx;
+  width: 100%;
+}
+
+.main_text_tips1 {
+  position: absolute;
+  top: 10rpx;
+  right: 32rpx;
+  font-size: 28rpx;
+  color: #b2b2b2;
+  width: 160rpx;
+  text-align: right;
+}
+
+.main_text_tips2 {
+  position: absolute;
+  top: 10rpx;
+  right: 28rpx;
+  font-size: 28rpx;
+  color: #b2b2b2;
+  width: 180rpx;
+  text-align: right;
+}
+
+.main_text_tips3 {
+  position: absolute;
+  top: 10rpx;
+  right: 320rpx;
+  font-size: 28rpx;
+  color: #b2b2b2;
+  width: 180rpx;
+  text-align: right;
+}
+
+.main_text_tips4{
+  position: absolute;
+  top: 10rpx;
+  right: 380rpx;
+  font-size: 28rpx;
+  color: #b2b2b2;
+  width: 180rpx;
+  text-align: right;
+}
+
+.tips {
+  position: relative;
+  height: 60rpx;
+}
+
+.blue {
+  color: #4bc1d2;
+}
+
+.other {
+  color: #b2b2b2;
+  background-color: white;
+}
+
+.main{
+  width:750rpx;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:15rpx;
+}
+.main_bottom{
+  width:690rpx;
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: stretch;
+}
+.item_view{
+  height: 120rpx;
+  line-height: 60rpx;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  flex:1;
+  border-right:1rpx solid #D8D8D8;
+  margin:20rpx 0rpx 20rpx 0rpx;
+  font-size: 36rpx;
+}
+.item_view_text{
+  width: 100%;
+  font-size:32rpx;
+  color:#b2b2b2;
+  overflow: hidden;
+  text-align: center;
+}
+.item_view_text_text{
+  font-size:40rpx;
+  color:#4bc2d6;
+  margin-right:10rpx;
+}
+.item_view_text_text2{
+  font-size:40rpx;
+  color:#4bc2d6;
+  margin-right:10rpx;
+}
+.main_text_text4{
+  margin:0;
+  text-align: center;
+}
+.else{
+  height:60rpx;
+  line-height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  margin-right:30rpx;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.else text{
+  width:100rpx;
+  font-size: 28rpx;
+  color:#b2b2b2;
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+<!--pages/studio/studio.wxml-->
+<scroll-view class="container" scroll-y="true">
+
+  <view class="notice" wx:for="{{array}}">
+    <navigator class="notice-text" url="../studioinfo/studioinfo?id={{item.id}}">
+      <image class="userlcon" src="{{https}}{{item.logo}}" mode="aspectFill"></image>
+      <view class="news">
+        <view class="news-top">
+          <text style="font-size:40rpx;margin-top: 8rpx; ">{{item.studio_name}}</text>
+        </view>
+        <view class="news-middle">
+          <text style="font-size:31rpx;">{{item.address}}</text>
+        </view>
+      </view>
+      <view>
+        <image class="arrow" src="/images/arrow.png"></image>
+      </view>
+    </navigator>
+
+    <view class="edit" bindtap="editstudio" wx:if="{{item.manager}}" data-id="{{item.id}}">工作室管理</view>
+  </view>
+
+</scroll-view>
+<view class="footer" bindtap="addstudio">新增工作室</view>

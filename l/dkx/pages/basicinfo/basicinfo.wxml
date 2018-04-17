@@ -1,0 +1,93 @@
+<!--pages/username/username.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <scroll-view class="container" scroll-y="true">
+    <!-- <view class="username" style=" border-top:1rpx solid #D8D8D8;">
+      <image class="icon" src="/images/name.png"></image>
+      <text class="name">姓名</text>
+      <input name="name" value="{{tranieeinfo.trainee_name}}" placeholder-style="color:#b5b5b5;" placeholder="请输入你的姓名" />
+    </view> -->
+    <picker mode="date" value="{{date}}" start="1950-01-01" end="2030-12-31" bindchange="bindDateChange">
+    <view class="username">
+      <image class="icon" src="/images/birthday.png"></image>
+      <text class="name">生日</text>
+      <text class="userpicker">{{date}}</text>
+      <input class="usergender" name="date" value="{{userdate}}" disabled="true" />
+    </view>
+  </picker>
+    <view class="username">
+      <image class="icon" src="/images/phone.png"></image>
+      <text class="name">电话</text>
+      <input type="number" name="phone" value="{{tranieeinfo.phone}}" placeholder-style="color:#b5b5b5;" placeholder="请输入你的电话" />
+    </view>
+    <view class="username">
+      <image class="icon" src="/images/company.png"></image>
+      <text class="name">公司</text>
+      <input name="coope" value="{{tranieeinfo.company}}" placeholder-style="color:#b5b5b5;" placeholder="请输入你的公司名" />
+    </view>
+    <picker mode="selector" value="{{industry}}" range="{{industrys}}" bindchange="bindIndustryChange">
+      <view class="username">
+        <image class="icon" src="/images/trade.png"></image>
+        <text class="name">行业</text>
+        <text class="userpicker">{{industrys[industry]}}</text>
+        <input class="usergender" placeholder-style="color:#b5b5b5;" name="industry" style="border:1rpx solid red;" readonly="true" disabled="true" value="{{industrys[industry]}}" />
+      </view>
+    </picker>
+    <!-- <view class="main">
+    <navigator class="username" url="../usercoach/usercoach">
+      <image class="icon" src="/images/specialty.png"></image>
+      <text class="name">教练</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+    <navigator class="username" url="../studio/studio">
+      <image class="icon" src="/images/yl.png"></image>
+      <text class="name">工作室</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+  </view> -->
+    <!-- <view class="main">
+    <navigator class="username" url="../studioshare/list">
+      <image class="icon" src="/images/jifen.png"></image>
+      <text class="name">优惠活动</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+  </view> -->
+    <!-- <view class="main">
+    <navigator class="username" url="../order/order">
+      <image class="icon" src="/images/type.png"></image>
+      <text class="name">会员卡</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+    <navigator class="username" url="../userpoints/userpoints">
+      <image class="icon" src="/images/jifen.png"></image>
+      <text class="name">会员积分</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+  </view> -->
+
+    <view class="username">
+      <image class="icon" src="/images/motto.png"></image>
+      <text class="name">运动座右铭</text>
+      <input name="motto" value="{{tranieeinfo.motto}}" placeholder-style="color:#b5b5b5;" placeholder="运动是一种自由" />
+    </view>
+
+
+    <!-- <view class="main">
+    <navigator class="username" url="../help/help">
+      <image class="icon" src="/images/help.png"></image>
+      <text class="name">用户操作指南</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+  </view> -->
+    <!--<view class="main">
+            <navigator class="username" url="../motorgroup/motorgroup">
+                    <image class="icon" src="/images/motto.png"></image>
+                    <text class="name">运动群</text>
+                    <image  class="arrow" src="/images/arrow.png"></image>
+            </navigator>
+        </view>    -->
+
+    <navigator url="../userinfo/userinfo" >
+    <button formType="submit" >保存</button>
+    </navigator>
+  </scroll-view>
+</form>

@@ -1,0 +1,84 @@
+/* pages/monthlist/monthlist.wxss */
+@import "../column/column.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #f7f9f8;
+  /*border-top:4rpx solid #D8D8D8;*/
+}
+@import "../../wxss/month_title.wxss";
+.container_title {
+  margin-top: 320rpx;
+}
+.notice {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+}
+.notice_text {
+  align-self: center;
+  height: 120rpx;
+  line-height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 3rpx solid #f7f9f8;
+}
+.notice_main {
+  align-self: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 3rpx solid #f7f9f8;
+  background-color: #f5f5f5;
+}
+.notice_text_lesson {
+  font-size: 34rpx;
+  flex: 1;
+  text-align: center;
+  color: #888;
+}
+
+.notice_text_date {
+  font-size: 34rpx;
+  width: 140rpx;
+  text-align: center;
+  color: #888;
+}
+
+.arrow {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 30rpx;
+}
+
+.notice_text_img {
+  margin-left: 30rpx;
+  margin-right: 15rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10%;
+}
+
+.notice_text_name {
+  /* height: 120rpx; */
+  line-height: 45rpx;
+  flex: 2;
+  font-size: 36rpx;
+  overflow: hidden;
+  text-align: left;
+  width: 240rpx;
+  /*margin-left:30rpx;*/
+}

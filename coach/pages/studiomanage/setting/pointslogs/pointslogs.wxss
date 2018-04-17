@@ -1,0 +1,63 @@
+/* pointslogs.wxss */
+@import "../../../../wxss/swiper.wxss";
+
+.swiper-tab-list {
+  border-top: 0rpx;
+}
+
+.item_class {
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  height: 130rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.item_text_time {
+  width: 200rpx;
+  font-size: 34rpx;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+  overflow: hidden;
+}
+
+.item_text_name {
+  width: 200rpx;
+  font-size: 34rpx;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+  height: 130rpx;
+  overflow: hidden;
+}
+
+.item_text_point {
+  width: 100rpx;
+  font-size: 34rpx;
+  line-height: 130rpx;
+  text-align: right;
+  margin-right: 30rpx;
+  overflow: hidden;
+  color: #888;
+}
+
+.box_one {
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+}
+
+.box_two {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: -40rpx;
+}
+
+.item_tips {
+  font-size: 26rpx;
+  color: #d9d9d9;
+  bottom: 4rpx;
+  width: 720rpx;
+  text-align: right;
+}

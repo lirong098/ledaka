@@ -1,0 +1,10 @@
+<!--pages/program/program.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <navigator class="username" wx:for="{{array}}" url="../addprogram/addprogram?program_id={{item.id}}">
+    <view class="view_text">
+      <text class="name">{{item.program_name}}</text>
+    </view>
+    <image class="arrow" src="/images/arrow.png"></image>
+  </navigator>
+</scroll-view>
+<view class="footer" bindtap="addprogram">新增课程</view>

@@ -1,0 +1,142 @@
+@import "../../wxss/swiper.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  height: 450rpx;
+  line-height: 50rpx;
+  display: flex;
+  font-size: 32rpx;
+  flex-flow: row;
+  background-color: white;
+  flex-direction: column;
+  width: 690rpx;
+  box-shadow: 2px 2px 2px gray;  
+  border-radius: 30rpx;
+}
+
+.title_head {
+  width: 690rpx;
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  height: 120rpx;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 30rpx;
+  border-radius: 10%;
+  margin-top: 10rpx;
+}
+
+.studio_name {
+  width: 340rpx;
+  overflow: hidden;
+  margin-left: 20rpx;
+  line-height: 120rpx;
+}
+
+.card_name {
+  width: 180rpx;
+  overflow: hidden;
+  line-height: 120rpx;
+  color: #888;
+  text-align: right;
+  margin-top: 40rpx;
+  font-size: 26rpx;
+}
+
+.title_contents {
+  width: 690rpx;
+  display: flex;
+  flex-flow: row;
+  margin-top: 18rpx;
+}
+
+.title_contents_l {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  text-align: right;
+  width: 210rpx;
+  margin-left: 30rpx;
+}
+
+.title_contents_r {
+  width: 450rpx;
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  overflow: hidden;
+  color: #888;
+}
+
+.title_contents_r text {
+  flex: 1;
+  overflow: hidden;
+}
+
+.notice-text {
+  width: 750rpx;
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+  font-size: 11pt;
+}
+
+.notice-text text {
+  text-align: center;
+}
+
+.notice_text_program {
+  width: 150rpx;
+}
+
+.notice_text_card {
+  width: 200rpx;
+}
+
+.notice_text_view {
+  width: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice_text_qty {
+  width: 150rpx;
+}
+
+.notice_text_sub {
+  width: 150rpx;
+}
+
+.footer {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  background-color: #4bc1d2;
+  position: fixed;
+  bottom: 1rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+}

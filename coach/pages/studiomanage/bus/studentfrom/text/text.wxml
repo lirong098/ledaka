@@ -1,0 +1,13 @@
+<!--pages/studiomanage/bus/studentfrom/text/text.wxml-->
+ <form bindsubmit="formSubmit">
+  <scroll-view class="container" scroll-y="false">
+    <view class="main">
+      <view class="main_view">
+        <textarea name="other" class="main_text_info" placeholder="请输入学员备注" placeholder-style="color:#888888;" value="{{text}}" maxlength="200" />
+        <text class="main_view_text">限200字</text>
+      </view>
+    </view>
+  </scroll-view>
+  <button formType="submit">保存</button>
+</form>
+

@@ -1,0 +1,3 @@
+<view class="container_canvas" >
+          <canvas canvas-id="tagRateCanvas" class="canvas" bindtouchmove="Evtouchmove" disable-scroll="true"></canvas>
+</view>

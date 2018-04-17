@@ -1,0 +1,57 @@
+<!--pages/addorder/addorder.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <scroll-view class="container" scroll-y="true">
+    <!-- <picker mode="selector" bindchange="bindprogram" value="{{programindex}}" range="{{program_array}}" range-key="program_name">
+      <view class="username">
+        <text class="name">{{lesson}}</text>
+        <text class="userpicker">{{program_array[programindex]['program_name']}}</text>
+        <input class="usergender" name="program" value="{{program_array[programindex]['id']}}" />
+      </view>
+    </picker> -->
+
+    <picker mode="selector" bindchange="bindPickerChange" value="{{cardindex}}" range="{{card_array}}" range-key="membership_name">
+      <view class="username">
+        <text class="name">{{card}}</text>
+        <text class="userpicker">{{card_array[cardindex]['membership_name']}}</text>
+        <input class="usergender" name="card" disabled='true' value="{{card_array[cardindex]['id']}}" />
+      </view>
+    </picker>
+    <picker mode="date" value="{{stardate}}" start="2016-01-01" end="2040-12-31" bindchange="bindstartChange">
+      <view class="username">
+        <text class="name">{{startdate}}</text>
+        <text class="userpicker">{{stardate}}</text>
+        <input class="usergender" name="startdate" value="{{stardate}}" disabled="true" />
+      </view>
+    </picker>
+
+    <picker mode="date" value="{{endate}}" start="2016-01-01" end="2040-12-31" bindchange="bindendChange">
+      <view class="username">
+        <text class="name">{{enddate}}</text>
+        <text class="userpicker">{{endate}}</text>
+        <input class="usergender" name="enddate" value="{{endate}}" disabled="true" />
+      </view>
+    </picker>
+
+    <view class="username">
+      <text class="name">{{goods_number}}</text>
+      <input type="number" name="goods_number" value="{{good_number}}" />
+    </view>
+    <view class="username">
+      <text class="name">{{goods_price}}</text>
+      <input type="number" name="goods_price" value="{{good_price}}" />
+    </view>
+    <view class="username">
+      <text class="name">{{goods_use}}</text>
+      <input type="number" name="goods_use" value="{{good_use}}" placeholder="0" />
+    </view>
+    <picker mode="selector" bindchange="bindstudio" value="{{studioindex}}" range="{{studio_array}}" range-key="studio_name">
+      <view class="username">
+        <text class="name">{{studio}}</text>
+        <text class="userpicker">{{studio_array[studioindex]['studio_name']}}</text>
+        <input class="usergender" name="studio_id" value="{{studio_array[studioindex]['id']}}" />
+      </view>
+    </picker>
+  </scroll-view>
+  <input class="usergender" name="seorder_id" value="{{seorder_id}}" />
+  <button formType="submit">{{save}}</button>
+</form>

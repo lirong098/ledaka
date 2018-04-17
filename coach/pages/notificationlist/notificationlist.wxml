@@ -1,0 +1,19 @@
+<!--pages/notificationlist/notificationlist.wxml-->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="loadMore">
+    <view class="notice">
+        <view class="viewbox" wx:for ="{{notification}}">
+        <navigator class="notice-text"  url="{{item.url}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" hover-class="none">
+            <view class="notice-text-img" style="{{item.styleclass}}"></view>
+            <image class="userlcon" src="{{item.picture}}"></image>
+            <view class="news">
+            <view class="news_name">
+                <text class="news_name_text">{{item.trainee_name}}</text>
+                <text class="news_name_week">{{item.create_time}}</text>
+            </view>
+            <text class="news_text"><text style="{{item.typestyle}}font-size:32rpx;">{{item.notification_type}}</text>{{item.information}}</text>
+            </view>
+        </navigator>
+        <view class="viewdelitem" bindtap = "delItem" data-index="{{index}}">删除</view>
+        </view>
+  </view>
+</scroll-view>

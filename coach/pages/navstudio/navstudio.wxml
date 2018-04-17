@@ -1,0 +1,28 @@
+<!--pages/navstudio/navstudio.wxml-->
+<loading hidden="{{hidden}}">
+    课表加载中...
+</loading>
+<view class="nav-title" style="{{txtStyle}}">
+        <navigator class ="nav-title-left" url="../schedule/schedule">
+            <image class="icon" src="/images/day.png"></image>
+            <text style="color:#4bc1d2;">{{month}}</text>
+        </navigator>
+        <view class ="nav-title-right-top">
+             <navigator  wx:for="{{lap}}" style="margin-top:16rpx;" hover-class="none" bindtap="{{bind_list_name}}" data-index="{{index}}">
+                  <text style="color:#838383;">{{item.week}}</text>
+                  <text class="{{item.styleclass}}">{{item.day}}</text>
+                  <view class="current_date" wx:if="{{item.show_current}}">
+                    <text>{{item.week}}</text>
+                    <text>{{item.day}}</text>
+                  </view>
+              </navigator>
+        </view>
+  </view>
+<navigator class="navstudio" wx:for="{{arrayobj}}" wx:key="id" url="../student/student?coach_id={{item.coach_id}}&schedule_id={{item.id}}&cancelreser=取消排课&bind=bindcancel" style ="{{item.style}}">
+  <text class="navstudio_date">{{item.start_time}}-{{item.end_time}}</text>
+  <text class="navstudio_name">{{item.program_name}}</text>
+  <view class="navstudio_program">
+    <text>{{item.trainee_name}}{{item.coach_name}}</text>
+    <text>{{item.status_text}}</text>
+  </view>
+</navigator>

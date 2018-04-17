@@ -1,0 +1,76 @@
+/* recommend.wxss */
+
+.container {
+  height: 100%;
+}
+
+.content {
+  min-height: 400rpx;
+  background: #fff;
+}
+
+.logoimage {
+  width: 750rpx;
+  height: 360rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+}
+
+.title {
+  width: 750rpx;
+  text-align: center;
+}
+
+.introduce {
+  width: 710rpx;
+  text-align: left;
+  margin-left: 20rpx;
+}
+
+.tips_title {
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+
+.wish {
+  width: 750rpx;
+  height: auto;
+  background: #fff;
+  margin-top: 10rpx;
+  min-height: 100rpx;
+}
+
+.ipt {
+  margin-left: 20rpx;
+  line-height: 50rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 710rpx;
+}
+
+.btn_share {
+  width: 350rpx;
+  margin-top: 10rpx;
+  margin-left: 200rpx;
+  border-radius: 0rpx;
+}
+
+.btn_left {
+  position: fixed;
+  bottom: -1rpx;
+  left: 0rpx;
+  width: 49.9%;
+  background-color: #81d8d0;
+  border-radius: 0rpx;
+  color: white;
+}
+
+.btn_right {
+  position: fixed;
+  bottom: -1rpx;
+  left: 50%;
+  width: 49.9%;
+  background-color: #4bc1d2;
+  border-radius: 0rpx;
+  color: white;
+}

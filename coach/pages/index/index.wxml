@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+  加载中...
+</loading>
+<scroll-view class="container" scroll-y="{{scrolly}}" bindscrolltolower="loadMore">
+  <!--<view wx:if="{{hasRefesh}}" class="refesh">
+  bindscrolltoupper="refesh"
+      <icon type="waiting" size="34"/><text >刷新中...</text>
+  </view>
+      <view wx:else  style="display:none" ><text></text></view>-->
+  <view class="box">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{picture}}" background-size="cover"></image>
+      <view class="userinfo-text">
+        <text class="userinfo-nickname">{{username}}</text>
+        <!--<image class="plus" src="/images/xue.png"/>-->
+        <text class="studentqty">{{txt.count}}</text>
+      </view>
+    </view>
+    <view class="main">
+      <navigator class="main-right" url="../monthlist/monthlist">
+        <view class="main-right-text">
+          <text>{{textclassright}}</text>
+        </view>
+        <view class="main-right-qty">
+          <text>{{txt.month}}</text>
+          <text>{{textnext}}</text>
+        </view>
+      </navigator>
+      <navigator class="main-left" url="../punchlist/punchlist">
+        <view class="main-left-text">
+          <text>{{textclass}}</text>
+        </view>
+        <view class="main-left-qty">
+          <text>{{txt.week}}</text>
+          <text>{{textnext}}</text>
+        </view>
+      </navigator>
+
+    </view>
+  </view>
+
+  <view class="notice">
+    <text class="notice-title">{{notice}}</text>
+    <view class="viewbox" wx:for="{{notification}}" wx:key="{{key}}">
+      <navigator class="notice-text" hover-class="none" url="{{item.url}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}">
+        <view class="notice-text-img" style="{{item.styleclass}}"></view>
+        <image class="userlcon" src="{{item.picture}}"></image>
+        <view class="news">
+          <view class="news_name">
+            <text class="news_name_text">{{item.trainee_name}}</text>
+            <text class="news_name_week">{{item.create_time}}</text>
+          </view>
+          <text class="news_text">
+            <text style="{{item.typestyle}}font-size:32rpx;">{{item.notification_type}}</text>{{item.information}}</text>
+        </view>
+      </navigator>
+      <view class="viewdelitem" bindtap="delItem" data-index="{{index}}">删除</view>
+    </view>
+  </view>
+  <view class="tips1">
+    <view wx:if="{{notifi_count >=21}}" class="loadMore">
+      <navigator url="../notificationlist/notificationlist" style="height:70rpx;width:100%;line-height:70rpx;text-align:center;color:#6BC4CA;display:none;">查看更多消息</navigator>
+    </view>
+  </view>
+</scroll-view>

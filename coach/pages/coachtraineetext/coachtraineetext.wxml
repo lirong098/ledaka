@@ -1,0 +1,37 @@
+<!--pages/coachtraineetext/coachtraineetext.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="container">
+    <view class="main">
+      <textarea class="main_text" value="{{text}}" placeholder="请参考以下问题，输入学员的相关信息。" placeholder-style="color:#b5b5b5;" name="trainee_text" style="font-size:36rpx;" maxlength="502"></textarea>
+      <text class="main_text1">限500字</text>
+    </view>
+    <view class="placeholder_text">
+      <text class="title" wx:if="{{Ftype == 'target'}}">
+      你希望通过训练达到什么目标？（减肥/恢复/增肌/运动/健康/塑身/...) 你希望多少时间达到这个目标？
+
+      你每周可以花多少时间来工作室训练？
+
+      你每周有多少时间做其它辅助练习？（如走路、跑步、骑车、爬楼梯、在家健身等）
+      </text>
+      <text class="title" wx:if="{{Ftype == 'situation'}}">
+      请介绍一下你工作中的活动情况？（如久坐、经常出差、饮食不规律、应酬多、精神压力大等）
+
+      请介绍一下你平时运动的情况和频率（是每天、每天还是每月），最近是否有参加其它的健身训练？
+
+      </text>
+      <text class="title" wx:if="{{Ftype == 'preferences'}}">
+      你喜欢一直坚持做相同的训练，还是喜欢尝试多个不同的训练？
+
+      当你需要减压的时候，你是喜欢做一些兴奋的、有挑战的训练，还是一些放松和常规的训练？
+
+           </text>
+      <text class="title" wx:if="{{Ftype == 'other'}}">
+      你以前身体是否受过伤，或者患过某种疾病？
+
+      你的家庭对你健身的影响有多大？
+      </text>
+    </view>
+  </view>
+  <button formType="submit">保存</button>
+</form>
+<!--<include src="../coachrecordtext/coachrecordtext.wxml"/>-->

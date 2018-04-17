@@ -1,0 +1,19 @@
+<!--list.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="viewbox" wx:for="{{array}}">
+    <navigator hover-class="none" class="notice-text" url="../studioshare/shareinfo/shareinfo?id={{item.id}}" data-index="{{index}}" style="{{item.txtStyle}}">
+      <image class="userlcon" src="{{https}}{{item.logo}}" style="border-radius: 10%;"></image>
+      <view class="news">
+        <view class="news-top">
+          <text>{{item.studio_name}}</text>
+        </view>
+        <view class="news-middle">
+          <text>{{item.address}}</text>
+        </view>
+      </view>
+      <view>
+        <image class="arrow" src="/images/arrow.png"></image>
+      </view>
+    </navigator>
+  </view>
+</scroll-view>

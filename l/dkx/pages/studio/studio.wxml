@@ -1,0 +1,23 @@
+<!--pages/studio/studio.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="viewbox" wx:for="{{array}}">
+    <navigator hover-class="none" class="notice-text" url="../studioinfo/studioinfo?id={{item.id}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}">
+      <image class="userlcon" src="{{https}}{{item.logo}}" style="border-radius: 10%;"></image>
+      <view class="news">
+        <view class="news-top">
+          <text>{{item.studio_name}}</text>
+        </view>
+        <view class="news-middle">
+          <text>{{item.address}}</text>
+        </view>
+        <!--<view class="news-bottom">
+                <text>{{item.coach_qty}}</text>
+            </view>-->
+      </view>
+      <view>
+        <image class="arrow" src="/images/arrow.png"></image>
+      </view>
+    </navigator>
+    <view class="viewdelitem" bindtap="delItem" data-index="{{index}}">删除</view>
+  </view>
+</scroll-view>

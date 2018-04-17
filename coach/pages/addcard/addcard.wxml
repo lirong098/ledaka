@@ -1,0 +1,11 @@
+<!--pages/addcard/addcard.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<scroll-view class="container" scroll-y="true">
+    <view class="username"  >
+            <text class="name">{{cardname}}</text>
+            <input  name="name"placeholder="{{prompt}}" value="{{name}}" placeholder-style="color:#b5b5b5;"/>
+    </view>
+</scroll-view>
+        <input class="usergender" name="card_id" value="{{id}}" />
+        <button formType="submit">{{save}}</button>
+</form>

@@ -1,0 +1,10 @@
+<!--pages/motorgroup/addmotorgroup/addmotorgroup.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<scroll-view class="container" scroll-y="true">
+    <view class="username"  >
+            <text class="name">名称</text>
+            <input  name="name" placeholder-style="color:#b5b5b5;" placeholder="如XXX公司瑜伽群" value="{{name}}"/>
+    </view>
+</scroll-view>
+        <button formType="submit">保存</button>
+</form>

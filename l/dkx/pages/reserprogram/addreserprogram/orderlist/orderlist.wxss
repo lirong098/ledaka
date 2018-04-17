@@ -1,0 +1,103 @@
+@import "../../../../wxss/swiper.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  height: 450rpx;
+  line-height: 50rpx;
+  display: flex;
+  font-size: 32rpx;
+  flex-flow: row;
+  background-color: white;
+  flex-direction: column;
+  width: 620rpx;
+  box-shadow: 2px 2px 2px gray;
+  border-radius: 30rpx;
+}
+
+.title_head {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  height: 120rpx;
+}
+
+.logo {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 30rpx;
+  border-radius: 10%;
+  margin-top: 10rpx;
+}
+
+.studio_name {
+  flex: 1;
+  overflow: hidden;
+  margin-left: 20rpx;
+  line-height: 120rpx;
+}
+
+.card_name {
+  width: 180rpx;
+  overflow: hidden;
+  line-height: 120rpx;
+  color: #888;
+  text-align: right;
+  margin-top: 40rpx;
+  font-size: 26rpx;
+  margin-right: 30rpx;
+}
+
+.title_contents {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  margin-top: 18rpx;
+}
+
+.title_contents_l {
+  display: flex;
+  flex: 0.8;
+  flex-flow: column;
+  text-align: right;
+  /*width: 210rpx;*/
+  margin-left: 10rpx;
+}
+
+.title_contents_r {
+  /*width: 450rpx;*/
+  flex: 2;
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  overflow: hidden;
+  color: #888;
+}
+
+.title_contents_r text {
+  flex: 1;
+  overflow: hidden;
+}
+
+.radio_img {
+  margin-right: 15rpx;
+}

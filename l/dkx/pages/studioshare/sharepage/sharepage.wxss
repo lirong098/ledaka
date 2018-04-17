@@ -1,0 +1,138 @@
+/* sharepage.wxss */
+
+.container {
+  height: 100%;
+  overflow: hidden;
+}
+
+.logoimage {
+  width: 750rpx;
+  height: 360rpx;
+  margin-left: 0rpx;
+  margin-top: 0rpx;
+}
+
+.edit-no {
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+  color: white;
+}
+
+.edit-no button {
+  background-color: #4bc1d2;
+  border-radius: 0rpx;
+  color: #fff;
+}
+
+.headinfo {
+  background-color: #fff;
+  height: 300rpx;
+}
+
+.share {
+  position: relative;
+  height: 120rpx;
+  padding-top: 30rpx;
+}
+
+.headimage {
+  position: absolute;
+  border-radius: 10%;
+  width: 120rpx;
+  height: 120rpx;
+  left: 260rpx;
+}
+
+.sharename {
+  position: absolute;
+  left: 400rpx;
+  width: 450rpx;
+  overflow: hidden;
+  top: 70rpx;
+  line-height: 42rpx;
+  height: 120rpx;
+  vertical-align: center;
+}
+
+.sharewish {
+  position: absolute;
+  left: 20rpx;
+  vertical-align: middle;
+  height: 100rpx;
+  width: 710rpx;
+  top: 180rpx;
+  line-height: 50rpx;
+}
+
+.studioinfo {
+  margin-top: 40rpx;
+  height: 800rpx;
+  background-color: white;
+}
+
+.nav {
+  width: 750rpx;
+  height: 50rpx;
+  margin-top: 60rpx;
+  text-align: center;
+}
+
+.urltext {
+  height: 50rpx;
+  color: #4bc1d2;
+  font-weight: 900;
+}
+
+.userlcon {
+  width: 98rpx;
+  height: 98rpx;
+  margin-left: 30rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+
+.news {
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  /*border:1rpx solid black;*/
+  width: 540rpx;
+}
+
+.news-top {
+  flex: 1;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+  font-size: 40rpx;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+.news-middle {
+  flex: 1;
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+  flex-direction: row;
+  font-size: 31rpx;
+  color: #888;
+  overflow: hidden;
+}
+
+.studio {
+  height: 180rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #d8d8d8;
+  position: relative;
+  z-index: 10;
+}
+
+.video {
+  width: 750rpx;
+  height: 360rpx;
+}

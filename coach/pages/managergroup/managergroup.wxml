@@ -1,0 +1,7 @@
+<!--pages/managergroup/managergroup.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <navigator class="username" wx:for="{{array}}" url="../addgroup/addgroup?group_id={{item.id}}">
+    <text class="name">{{item.group_name}}</text>
+  </navigator>
+</scroll-view>
+<navigator class="footer" url="../addgroup/addgroup">{{addgroup}}</navigator>

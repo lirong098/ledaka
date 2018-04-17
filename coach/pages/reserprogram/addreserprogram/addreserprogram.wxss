@@ -1,0 +1,136 @@
+/* pages/addreserprogram/addreserprogram.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.nav {
+  height: 100rpx;
+  /*width:750rpx;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+.navl {
+  height: 100rpx;
+  line-height: 94rpx;
+  /*margin-left:160rpx;
+    margin-right:90rpx;*/
+  font-size: 36rpx;
+  color: #4ac0d2;
+  flex: 1;
+  background-color: white;
+}
+
+.nav-left-view {
+  height: 6rpx;
+  /*width:160rpx;*/
+  background-color: #4ac0d2;
+}
+
+.navr {
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 94rpx;
+  text-align: center;
+  color: #353535;
+  flex: 1;
+  background-color: #ebeff3;
+}
+
+.nav-right-view {
+  height: 6rpx;
+  /*width:160rpx;*/
+  background-color: #4ac0d2;
+}
+
+.navrighttext {
+  color: #888;
+}
+
+.navlefttext {
+  color: #4ac0d2;
+}
+
+.containerb {
+  height: 78.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1rpx solid #d8d8d8;
+}
+
+button {
+  background-color: #4bc1d2;
+  color: white;
+  width: 680rpx;
+  font-size: 36rpx;
+  margin-top: 150rpx;
+}
+
+.username {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+}
+
+.name {
+  font-size: 36rpx;
+  color: #000;
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.username input {
+  margin-top: 25rpx;
+  margin-right: 30rpx;
+  font-size: 32rpx;
+  color: #888;
+  text-align: right;
+  flex: 2;
+  padding-left: 10rpx;
+}
+
+.userpicker {
+  /*margin-right:30rpx;*/
+  font-size: 32rpx;
+  color: #888;
+  text-align: right;
+  width: 400rpx;
+  margin-right: 30rpx;
+  padding-left: 10rpx;
+  flex: 2;
+}
+
+.usergender {
+  display: none;
+}
+
+.footerb {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  font-size: 40rpx;
+  background-color: #4bc1d2;
+  position: fixed;
+  bottom: 0rpx;
+  border-radius: 5rpx;
+  text-align: center;
+  color: white;
+}

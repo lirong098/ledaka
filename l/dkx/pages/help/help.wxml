@@ -1,0 +1,80 @@
+<!--help.wxml-->
+<scroll-view class="container" scroll-y="true" scroll-into-view="{{toView}}">
+  <view class="t1">
+    <text>乐打卡</text>
+  </view>
+
+  <view class="contents">
+    <text>帮助健身工作室学员更容易地约课、锻炼打卡、与教练互动、以及与朋友社交，把麻烦和枯燥的健身运动变得简单和快乐。赶快加入我们吧。</text>
+  </view>
+
+  <view class="t2">
+    <text>帮助目录</text>
+  </view>
+
+  <view class="catalogue" bindtap="bindtapTo1">
+    <text>1. 学员初始化设置</text>
+  </view>
+  <view class="catalogue" bindtap="bindtapTo2">
+    <text>2. 学员约课</text>
+  </view>
+  <view class="catalogue" bindtap="bindtapTo3">
+    <text>3. 学员打卡</text>
+  </view>
+
+  <view class="t2">
+    <text>详细内容</text>
+  </view>
+
+  <view id="c1" class="t3">
+    <text>1. 学员初始化设置</text>
+  </view>
+  <view class="contents">
+    <text>设置学员的基本信息，查看添加的教练和工作室。点击以下图片播放详细操作视频：</text>
+  </view>
+
+  <view class="images" bindtap="navigateTo" id="5">
+    <image src="{{url}}5.png" mode="aspectFill"></image>
+    <view class="desc">
+      <text>学员版 - 学员初始化设置视频(1`40``)</text>
+    </view>
+  </view>
+
+  <view id="c2" class="t3">
+    <text>2. 学员约课</text>
+  </view>
+  <view class="contents">
+    <text>学员预约私教和团课，查看预约信息，以及取消预约。点击以下图片播放详细操作视频：</text>
+  </view>
+
+  <view class="images" bindtap="navigateTo" id="6">
+    <image src="{{url}}6.png" mode="aspectFill"></image>
+    <view class="desc">
+      <text>学员版 - 学员约课视频(2`25``)</text>
+    </view>
+  </view>
+
+  <view id="c3" class="t3">
+    <text>3. 学员打卡</text>
+  </view>
+  <view class="contents">
+    <text>学员上课后打卡、查看打卡纪录和写训练日记。点击以下图片播放详细操作视频：</text>
+  </view>
+
+  <view class="images" bindtap="navigateTo" id="7">
+    <image src="{{url}}7.png" mode="aspectFill"></image>
+    <view class="desc">
+      <text>学员版 - 学员打卡视频(1`05``)</text>
+    </view>
+  </view>
+
+  <view class="contents" style="margin-top: 80rpx;">
+    <text>如果你在使用过程中有任何问题和建议，请随时告诉我们，谢谢。</text>
+  </view>
+  <view class="contents">
+    <text>客服支持电话：13701859701</text>
+  </view>
+
+  <view style="height:200rpx;"></view>
+
+</scroll-view>

@@ -1,0 +1,56 @@
+<!--pages/addprogram/addprogram.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="container">
+
+    <view class="classname">
+      <text class="name">课程名称</text>
+      <input name="name" placeholder-style="color:#b5b5b5;" placeholder="请填写课程名称" value="{{program.program_name}}"/>
+    </view>
+
+    <view class="introduce">
+      <textarea name="introduce" placeholder-style="color:#b5b5b5;" placeholder="填写课程的详细介绍" value="{{program.introduction}}" maxlength="450"/>
+    </view>
+
+    <scroll-view class="scroll_box" scroll-y="true">
+      <view class="logo">
+        <text class="tips">课程形象图片</text>
+        <view class="tips_img weui-uploader__input-box">
+          <image class="logoimage" src="{{https}}{{source}}" bindtap="chooseImage" mode="aspectFill"></image>
+        </view>
+        <input name="logo" value="{{source}}" style="display:none;" />
+      </view>
+
+      <view class="images">
+        <view class="weui-cells">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title">课程详细介绍图片</view>
+                  <view class="weui-uploader__info">{{files.length}}/9</view>
+                </view>
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files" id="uploaderFiles">
+                    <block wx:for-items="{{files}}" wx:key="{{index}}">
+                      <view class="weui-uploader__file" id="{{https}}{{item}}">
+                        <image class="weui-uploader__img" src="{{https}}{{item}}" mode="aspectFill" bindtap="previewImage" id="{{https}}{{item}}" />
+                        <view class="weui-uploader__im_view" bindtap="deleteimage" data-index="{{index}}">
+                          <image class="deleimg" src="/images/delete.png"></image>
+                        </view>
+                      </view>
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="uploadImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+  <button formType="submit">保存</button>
+</form>

@@ -1,0 +1,68 @@
+<!--pages/recordtrainess/recordtrainess.wxml-->
+<!--<form bindsubmit="formSubmit" bindreset="formReset">-->
+<scroll-view class="container" scroll-y="true">
+  <view class="remark">
+    <view class="remark_top">
+      <text class="remark_top_text">目标</text>
+      <navigator class="remark_top_button" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{target}}&type=target">修改</navigator>
+    </view>
+    <view class="remark_bottom">
+      {{target}}
+    </view>
+  </view>
+  <view class="remark">
+    <view class="remark_top">
+      <text class="remark_top_text">现状</text>
+      <navigator class="remark_top_button" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{situation}}&type=situation">修改</navigator>
+    </view>
+    <view class="remark_bottom">
+      {{situation}}
+    </view>
+  </view>
+  <view class="remark">
+    <view class="remark_top">
+      <text class="remark_top_text">锻炼偏好</text>
+      <navigator class="remark_top_button" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{preferences}}&type=preferences">修改</navigator>
+    </view>
+    <view class="remark_bottom">
+      {{preferences}}
+    </view>
+  </view>
+  <view class="remark">
+    <view class="remark_top">
+      <text class="remark_top_text">其他</text>
+      <navigator class="remark_top_button" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{other}}&type=other">修改</navigator>
+    </view>
+    <view class="remark_bottom">
+      {{other}}
+    </view>
+  </view>
+  <!--<view class="main">start main
+        <text class="main_text" style="font-size:36rpx;">{{remark}}</text>
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                            <view class="weui-uploader__title"></view>
+                            <view class="weui-uploader__info">{{files.length}}/9</view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                            <view class="weui-uploader__files" id="uploaderFiles">
+                                <block wx:for-items="{{files}}" wx:key="{{index}}">
+                                    <view class="weui-uploader__file" >
+                                        <image class="weui-uploader__img" bindtap="previewImage" id="{{url}}{{item}}" src="{{url}}{{item}}" mode="aspectFill" />
+                                    </view>
+                                </block>
+                            </view>
+                            
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+  </view>end main-->
+</scroll-view>
+<!--<navigator class="bind" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&remark={{remark}}">修改学员备注</navigator>
+</form>-->
+

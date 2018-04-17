@@ -1,0 +1,6 @@
+/* pages/addreserprogram/traineelist/traineelist.wxss */
+@import "../../../utils/traineelist/traineelist.wxss";
+@import "../../../utils/searchbar/searchbar.wxss";
+.container{
+  border:none;
+}

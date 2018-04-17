@@ -1,0 +1,15 @@
+<!--pages/usercenter/qrcode/qrcode.wxml-->
+<view class="container">
+  <text class="txt">新增学员步骤：</text>
+  <text class="content" wx:if="{{platform  == \"ios\"}}">
+    1) 点击下面二维码显示大图
+    2) 长按大图，在弹出菜单中选择“发送给朋友”
+    3) 学员点击收到的二维码后，长按后选择“识别图中的二维码”就可以添加你为教练。
+  </text>
+  <text class="content" wx:else>
+    1) 点击下面二维码显示大图
+    2) 点击右上角按钮，在弹出菜单中选择“发送给朋友”
+    3) 学员点击收到的二维码后，长按后选择“识别图中的二维码”就可以添加你为教练。
+  </text>
+  <image class="img" src="{{https}}{{qrcode}}" bindtap="previewImage"></image>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/student/student.wxml-->
+<loading hidden="{{hidden}}">
+  数据请求中...
+</loading>
+<scroll-view class="container" scroll-y="true">
+  <view class="title">
+    <view class="title_top">
+      <text class="lesson">{{schedule['program_name']}}</text>
+      <text class="student_qty">{{schedule.coach_name}}</text>
+    </view>
+    <view class="title_bottom">
+      <text class="title_bottom_left">{{schedule['class_date']}} {{schedule['start_time']}}{{schedule['end_time']}}</text>
+      <text class="student_qty">限{{schedule['maximum_attendants']}}人</text>
+    </view>
+  </view>
+  <navigator class="notice-text" wx:for="{{trainee}}" url="../studentinfo/studentinfo?id={{item.trainee_id}}">
+    <image class="userlcon" src="{{item.trainee_picture}}"></image>
+    <view class="notice_text_view" wx:if="{{item.trainee_company != ''}}">
+      <text class="notice_text_one">{{item.trainee_name}}</text>
+      <text class="notice_text_o">{{item.trainee_company}}</text>
+    </view>
+    <view class="notice_text_view" wx:else>
+      <text class="notice_text_one_down">{{item.trainee_name}}</text>
+    </view>
+    <text class="notice_text_tow">{{item.membership_name}}</text>
+    <text class="notice_text_t">{{item.goods_use}}{{item.text}}{{item.goods_number}}</text>
+    <text class="notice_text_san" style="color:{{item.styleclass}};">{{item.attendent_status}}</text>
+  </navigator>
+
+</scroll-view>
+<view class="footer" wx:if="{{Fifstatus == 1}}">
+  <block wx:if="{{Fifstatus == 1}}">
+    <block wx:if="{{nocancelreser != '改预约时间' && !isfull}}">
+      <view class="footer-left" bindtap="bindChangeCoach" wx:if="{{is_showUCB}}">换教练</view>
+      <view class="footer-center" bindtap="{{bind}}">{{cancelreser}}</view>
+      <view class="footer-right" bindtap="share">邀请学员</view>
+    </block>
+    <block wx:if="{{nocancelreser != '改预约时间' && isfull}}">
+      <!-- <view class="footer-left" bindtap="bindChangeCoach" wx:if="{{is_showUCB}}">换教练</view> -->
+      <view class="footer-center" bindtap="{{bind}}">{{cancelreser}}</view>
+    </block>
+    <block wx:if="{{nocancelreser == '改预约时间'}}">
+      <view class="footer-left" bindtap="bindChangeCoach" wx:if="{{is_showUCB}}">换教练</view>
+      <view class="footer-center" wx:if="{{nocancelreser =='改预约时间'}}" bindtap="{{nobind}}">{{nocancelreser}}</view>
+      <view class="footer-right" bindtap="{{bind}}">{{cancelreser}}</view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="footer-left" style="background-color:#C4C4C4;">{{cancelreser}}</view>
+  </block>
+</view>

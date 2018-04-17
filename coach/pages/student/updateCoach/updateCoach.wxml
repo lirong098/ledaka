@@ -1,0 +1,10 @@
+<!--pages/student/updateCoach/updateCoach.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="username" wx:for="{{coachList}}">
+      <image class="icon" src="{{item.picture}}" style="border-radius: 10%;"></image>
+      <text class="name">{{item.coach_name}}</text>
+      <radio class="arrow" value="{{item.coach_id}}" checked="{{item.checked}}" color="#4bc1d2" />
+    </label>
+  </radio-group>
+</scroll-view>

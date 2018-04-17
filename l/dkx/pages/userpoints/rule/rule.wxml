@@ -1,0 +1,50 @@
+<!--rule.wxml-->
+<scroll-view class="contents" scroll-y="true">
+  <view style="width:750rpx;height:80rpx;"></view>
+
+  <view class="content">
+
+    <view class="item" wx:if="{{info.check > 0}}">
+      <text class="t1">上课（每次）</text>
+      <text class="ipt">{{info.check}}</text>
+    </view>
+    <view class="item" wx:if="{{info.edit > 0}}">
+      <text class="t1">写训练日记（每次）</text>
+      <text class="ipt">{{info.edit}}</text>
+    </view>
+
+    <view class="item" wx:if="{{info.award > 0 && info.count > 0}}">
+      <view class="item_inline">
+        <text class="t1_inline" style="margin-left:50rpx;">每月上课次数≥</text>
+        <text class="ipt_inline">{{info.count}}</text>
+        <text class="t2_inline">次</text>
+        <text class="ipt_inline_points">{{info.award}}</text>
+      </view>
+    </view>
+
+    <view class="tips_title"></view>
+
+    <view class="item" wx:if="{{info.new > 0}}">
+      <text class="t1">新购卡</text>
+      <text class="ipt">{{info.new}}</text>
+    </view>
+
+    <view class="item" wx:if="{{info.again > 0}}">
+      <text class="t1">续卡</text>
+      <text class="ipt">{{info.again}}</text>
+    </view>
+
+    <view class="tips_title"></view>
+
+    <view class="item" wx:if="{{info.reference > 0}}">
+      <text class="t1">会员转介绍（每人）</text>
+      <text class="ipt">{{info.reference}}</text>
+    </view>
+
+  </view>
+</scroll-view>
+
+<view class="title">
+  <text class="t1">项目</text>
+  <text class="t2">积分</text>
+</view>

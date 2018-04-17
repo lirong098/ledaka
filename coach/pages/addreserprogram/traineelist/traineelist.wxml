@@ -1,0 +1,14 @@
+<!--pages/addreserprogram/traineelist/traineelist.wxml-->
+<include src="../../../utils/searchbar/searchbar.wxml" />
+<include src="../../../utils/traineelist/traineelist.wxml" wx:if="{{inputshow}}"/>
+<block wx:else>
+<radio-group class="radio-group" bindchange="radioChange">
+    <view class="main" wx:for="{{trainee_array}}">
+      <label class="main-text">
+        <image class="main-text-img" src="{{item.picture}}"></image>
+        <text class="main_text_text">{{item.name}}</text>
+        <radio class="main_text_text2" value="{{item.id}},{{item.name}}" checked="{{item.checked}}" color="#4bc1d2" />
+      </label>
+    </view>
+</radio-group>
+</block>

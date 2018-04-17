@@ -1,0 +1,37 @@
+/* addexchange.wxss */
+@import "../../../../../wxss/main.wxss";
+
+.item {
+  height: 110rpx;
+  line-height: 110rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.name {
+  font-size: 38rpx;
+  color: #000;
+  flex: 1;
+  margin-left: 40rpx;
+}
+
+.item input {
+  text-align: right;
+  width: 410rpx;
+  margin-top: 28rpx;
+  margin-right: 40rpx;
+  font-size: 38rpx;
+  color: #888;
+}
+
+.value {
+  text-align: right;
+  width: 410rpx;
+  margin-right: 40rpx;
+  font-size: 38rpx;
+  color: #888;
+}

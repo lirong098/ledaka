@@ -1,0 +1,46 @@
+<!--pages/student/updatestudent/updatestudent.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <scroll-view class="container" scroll-y="true">
+    <view class="schedule_info">
+      <view class="item_trainee">
+        <image src="{{trainee_picture}}" class="item_trainee_img"></image>
+        <text class="item_trainee_name">{{trainee_name}}</text>
+      </view>
+      <view class="item_schedule">
+        <text>预约课程：</text>
+        <text>{{program_name}}</text>
+      </view>
+      <view class="item_schedule">
+        <text>原预约日期：</text>
+        <text>{{class_date}}</text>
+      </view>
+      <view class="item_schedule">
+        <text>原预约时间：</text>
+        <text>{{Ftime}}-{{Fend_time}}</text>
+      </view>
+    </view>
+    <view class="title">输入新预约时间</view>
+    <picker mode="date" bindchange="bindDateChange" value="{{date}}" start="2017-01-01" end="2030-12-31" disabled="{{schedule['disadled']}}">
+      <view class="username">
+        <text class="name">日期</text>
+        <text class="userpicker">{{date}}</text>
+        <input class="usergender" name="date" value="{{date}}" disabled="true" />
+      </view>
+    </picker>
+    <picker mode="time" value="{{time}}" start="6:00" end="24:00" bindchange="bindTimeChange" disabled="{{schedule['disadled']}}">
+      <view class="username">
+        <text class="name">开始时间</text>
+        <text class="userpicker">{{time}}</text>
+        <input class="usergender" name="time" value="{{time}}" disabled="true" />
+      </view>
+    </picker>
+    <picker mode="time" value="{{end_time}}" start="6:00" end="24:00" bindchange="bindEndTimeChange" disabled="{{schedule['disadled']}}">
+      <view class="username">
+        <text class="name">结束时间</text>
+        <text class="userpicker">{{end_time}}</text>
+        <input class="usergender" name="end_time" value="{{end_time}}" disabled="true" />
+      </view>
+    </picker>
+  </scroll-view>
+  <button formType="submit">确定</button>
+</form>

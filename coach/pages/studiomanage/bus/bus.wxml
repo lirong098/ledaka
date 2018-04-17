@@ -1,0 +1,117 @@
+<!--pages/studiomanage/bus/bus.wxml-->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="loadMore">
+  <view class="nav">
+    <view class="{{item.classname}} nav_button" bindtap="bindnavchange" wx:for="{{nav}}" data-index="{{index}}">
+      <text class="{{item.classname}} nav_button_text" style="height:66rpx;line-height:66rpx;">{{item.name}}</text>
+      <text class="{{msg == index ? 'blue' : 'other'}}" style="font-size:32rpx;">{{item.qty}}</text>
+      <view wx:if="{{index == 0}}" class="nav_button_view" style="{{item.bottom}}width:200rpx;margin-left:75rpx;"></view>
+      <view wx:if="{{index == 1}}" class="nav_button_view" style="{{item.bottom}}width:240rpx;margin-left:53rpx;"></view>
+    </view>
+  </view>
+  <!--<view class="main" wx:for="{{array}}" wx:for-index="idx">-->
+  <block wx:if="{{showpage}}">
+    <view class="tips">
+      <text class="main_text_tips3" style="font-size:32rpx;">电话</text>
+      <text class="main_text_tips1" style="font-size:32rpx;">报名日期</text>
+    </view>
+    <navigator class="main-text" url="studentfrom/studentfrom?id={{item.trainee_id}}&studio_id={{studio_id}}" wx:for="{{share_array}}">
+      <image class="main-text-img" src="{{item.picture}}"></image>
+      <text class="main_text_text" style="overflow:hidden;font-size:32rpx;width:240rpx;">{{item.trainee_name}}</text>
+      <text class="main_text_text3" style="width:220rpx;font-size:32rpx;overflow:hidden;color:#b2b2b2;margin-left:10rpx;margin-right:10rpx;">{{item.trainee_phone}}</text>
+      <text class="main_text_text2" style="font-size:32rpx;">{{item.create_times}}</text>
+    </navigator>
+  </block>
+  <block wx:else>
+
+    <view class="main">
+      <view class="main_bottom">
+        <view class="item_view">
+          <text>转发</text>
+          <text class="item_view_text">
+          <text class="item_view_text_text">{{studio_array.sharetimes}}</text>次</text>
+        </view>
+        <view class="item_view">
+          <text>点击</text>
+          <text class="item_view_text">
+          <text class="item_view_text_text">{{studio_array.pv}}</text>人次</text>
+        </view>
+        <view class="item_view">
+          <text>报名</text>
+          <text class="item_view_text">
+          <text class="item_view_text_text">{{studio_array.share_count}}</text>人次</text>
+        </view>
+        <view class="item_view" style="border:none;">
+          <text>买课</text>
+          <text class="item_view_text">
+          <text class="item_view_text_text2">{{studio_array.seorder_count}}</text>次
+          </text>
+        </view>
+      </view>
+    </view>
+
+    <view class="else">
+      <text class="else_text1" style="font-size:32rpx;">转发</text>
+      <text class="else_text2" style="font-size:32rpx;">点击</text>
+      <text class="else_text3" style="font-size:32rpx;">报名</text>
+      <text class="else_text4" style="font-size:32rpx;">买课</text>
+    </view>
+
+    <navigator class="main-text" url="studentfrom/studentfrom?id={{item.trainee_id}}&studio_id={{studio_id}}" wx:for="{{share_trainee}}">
+      <image class="main-text-img" src="{{item.picture}}"></image>
+      <text class="main_text_text" style="overflow:hidden;font-size:32rpx;">{{item.trainee_name}}</text>
+      <text class="main_text_text4">{{item.sharetimes}}</text>
+      <text class="main_text_text4">{{item.pv}}</text>
+      <text class="main_text_text4">{{item.share_count}}</text>
+      <text class="main_text_text4" style="margin-right:30rpx;">{{item.seorder_count}}</text>
+    </navigator>
+  </block>
+  <!--</view>-->
+  <view style="width:750rpx;height:120rpx;"></view>
+</scroll-view>
+
+
+
+
+
+
+
+<view class="title">
+  <view class="swiper-tab-blue">
+    <view class="swiper-tab-list-blue other-blue" data-current="0" bindtap="swichNav">
+      <view class="box_left">
+        <view class="box_left_img">
+          <image class="img" src="/images/Statistics1.png"></image>
+        </view>
+        <text class="text_title">统计</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+    <view class="swiper-tab-list-blue other-blue" data-current="1" bindtap="swichNav">
+      <view class="box_center">
+        <view class="box_left_img">
+          <image class="img" src="/images/member.png"></image>
+        </view>
+        <text class="text_title">会员</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+    <view class="swiper-tab-list-blue on-blue" data-current="3">
+      <view class="box_center">
+        <view class="box_left_img">
+          <image class="img" src="/images/bus1.png"></image>
+        </view>
+        <text class="text_title">商机</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+    <view class="swiper-tab-list-blue other-blue" data-current="2" bindtap="swichNav">
+      <view class="box_right">
+        <view class="box_left_img">
+          <image class="img" src="/images/setup1.png"></image>
+        </view>
+        <text class="text_title">设置</text>
+        <!--<view class="on-blue-line"></view>-->
+      </view>
+    </view>
+  </view>
+</view>

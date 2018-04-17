@@ -1,0 +1,21 @@
+<!--star notice-->
+ <view class="notice">
+  <view class="notice_text" wx:for="{{recordlist}}">
+      <navigator url="../record/record?record_id={{item.id}}&studiolist=1">
+        <view class="notice_view">
+          <image src="{{item.picture}}" class="notice_text_date_img" style="margin-left:30rpx;"></image>
+          <text class="notice_text_date_name">{{item.trainee_name}}</text>
+          <text class="notice_text_date_text2">{{item.program_name}}</text>
+          <text class="notice_text_date_text1" style="margin-right:30rpx;">{{item.class_month}}{{item.class_date}}</text>
+          <image class="arrow1" src="/images/arrow.png" mode="aspectFill"></image>
+        </view>
+        <view class="notice_text_text">{{item.trainee_comments}}</view>
+        <view class="notice_text_img">
+          <view class="notice_text_img_view" wx:for="{{item.url}}" wx:for-item="it">
+            <image class="notice_text_img_view_img" src="{{url}}{{it}}" mode="aspectFill"></image>
+          </view>
+        </view>
+      </navigator>
+  </view>
+</view>
+<!--end notice-->

@@ -1,0 +1,59 @@
+<!--pages/studiomanage/bus/studentfrom/studentfrom.wxml-->
+<scroll-view class="container" scroll-y="true" style="height:{{boxheight}}">
+
+  <view class="notice-text">
+    <image class="userlcon" src="{{trainee.trainee_info.picture}}"></image>
+    <view class="news">
+      <view class="news-top">
+        <!--{{traineeinfo['1'].trainee_name}}-->
+        <text style="margin-top:16rpx;">{{trainee.trainee_name}}</text>
+        <text style="margin-top:20rpx;"></text>
+        <text style="margin-top:20rpx;">{{trainee.trainee_info.sex == 1 ? '男' :'女'}}</text>
+      </view>
+      <view class="news-middle">
+        <text class="news_middle_text">昵称：{{trainee.trainee_info.trainee_nickname}}</text>
+        <text class="news_middle_text2">{{trainee.trainee_info.company}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="username" id="usernamefrist">
+    <image class="icon" src="/images/me.png"></image>
+    <text class="name">姓名</text>
+    <input value="{{trainee.trainee_name}}" style="font-size:36rpx;" disabled = "true" />
+  </view>
+
+  <view class="username" bindtap="calling">
+    <image class="icon" src="/images/phone.png"></image>
+    <text class="name">电话</text>
+    <text class="brithd" style="font-size:36rpx;color:#4bc1d2;">{{trainee.trainee_phone_from.trainee_phone}}</text>
+    <!-- <input type="number"  style="font-size:36rpx;color:#4bc1d2;" value="{{trainee.trainee_phone_from.trainee_phone}}" disabled = "true" /> -->
+  </view>
+
+    <view class="username">
+      <image class="icon" src="/images/birthday.png"></image>
+      <text class="name">注册日期</text>
+      <text class="brithd">{{trainee.trainee_phone_from.create_time}}</text>
+    </view>
+
+<view class="from">
+  <view class="from_top">
+    <image class="from_icon"  src="/images/from1.png"></image>
+    <text>来源</text>
+    <text>{{trainee.from_text}}</text>
+  </view>
+  <view class="from_bottom">
+    <text>{{trainee.from_name}}</text>
+    <image src="{{trainee.from_picture}}"></image>
+  </view>
+</view>
+
+<view class="remarks">
+  <view class="remarks_top">
+    <image class="from_icon" src="/images/remark.png"></image>
+    <text>备注</text>
+    <navigator url="text/text?other={{trainee.trainee_phone_from.other}}&studio_id={{studio_id}}&trainee_id={{trainee_id}}">修改备注</navigator>
+  </view>
+  <text class="remarks_bottom">{{trainee.trainee_phone_from.other}}</text>
+</view>
+</scroll-view>

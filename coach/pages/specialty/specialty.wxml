@@ -1,0 +1,9 @@
+<!--pages/specialty/specialty.wxml-->
+<scroll-view class="container" scroll-y="true">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        
+        <textarea name="expertise" placeholder="请描述您的专长"  auto-focus auto-height ="true" maxlength="200"/>
+
+        <button formType="submit">保存并使用</button>
+    </form>
+</scroll-view>

@@ -1,0 +1,79 @@
+/* pages/addgroup/addgroup.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  /*background-color:#F7F9F8;*/
+  border-top: 1rpx solid #ebeff3;
+}
+
+.username {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+}
+
+.name {
+  font-size: 34rpx;
+  color: #000;
+  width: 190rpx;
+  margin-left: 30rpx;
+}
+
+.username input {
+  text-align: right;
+  width: 495rpx;
+  margin-top: 27rpx;
+  font-size: 11pt;
+  color: #888;
+  margin-right: 30rpx;
+  /*border:1rpx solid black;*/
+}
+
+#introduction {
+  height: 200rpx;
+  line-height: 200rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+}
+
+#introduction textarea {
+  padding-top: 15rpx;
+  padding-bottom: 15rpx;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.bind {
+  flex:1;
+  background-color:#4dadd3;
+  color: white;
+  font-size: 40rpx;
+  border-radius: 0rpx;
+  border:none;
+}
+.bind:nth-child(2){
+  background-color:  #4bc1d2;
+}

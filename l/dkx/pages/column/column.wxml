@@ -1,0 +1,36 @@
+<scroll-view class="container" scroll-y="true" bindscrolltolower="loadMore">
+  <view class="main_nav">
+    <view class="swiper-tab">
+      <view class="swiper-tab-list" data-current="0" bindtap="swichNav">
+        <view class="{{currentTab==0 ? 'on' : 'other'}}">训练记录</view>
+        <view style="height:6rpx;width:200rpx;background-color:#4bc1d2;margin-left:30rpx;"></view>
+      </view>
+      <view class="swiper-tab-list" data-current="1" bindtap="swichNav">
+        <view class="{{currentTab==1 ? 'on' : 'other'}}">我的故事</view>
+        <view style="height:6rpx;width:200rpx;background-color:#4bc1d2;margin-left:30rpx;"></view>
+      </view>
+      <view class="swiper-tab-list" data-current="2" bindtap="swichNav">
+        <view class="{{currentTab==2 ? 'on' : 'other'}}">统计</view>
+        <view style="height:6rpx;width:200rpx;background-color:#4bc1d2;margin-left:30rpx;"></view>
+      </view>
+    </view>
+  </view>
+
+<block wx:if="{{currentTab==0}}">
+  <!--star notice-->
+  <view class="main">
+    <include src="../notice/notice.wxml" wx:if="{{bind_status == 1}}"/>
+    <include src="column_notice.wxml" wx:else/>
+  </view>
+  <!--end notice-->
+</block>
+<block wx:if="{{currentTab==1}}">
+  <include src="../motorgroup/traineephoto.wxml" />
+</block>
+<block wx:if="{{currentTab==2}}">
+  <view class="container_canvas">
+     <view class="container_canvas_month">月打卡统计</view> 
+    <canvas canvas-id="tagRateCanvas" class="canvas" bindtouchmove="Evtouchmove" disable-scroll="true"></canvas>
+  </view>
+</block>
+</scroll-view>

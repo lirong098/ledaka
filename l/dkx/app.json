@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/motorgroup/motorgroup",
+    "pages/motorgroup/addmotorgroup/addmotorgroup",
+    "pages/motorgroup/motorgroupinfo/motorgroupinfo",
+    "pages/motorgroup/motorgrouplist/motorgrouplist",
+    "pages/motorgroup/musiclist/musiclist",
+    "pages/recordlist/recordlist",
+    "pages/mycoachinfo/mycoachinfo",
+    "pages/traineerecordtext/traineerecordtext",
+    "pages/notificationlist/notificationlist",
+    "pages/record/record",
+    "pages/column/column",
+    "pages/mysuccess/mysuccess",
+    "pages/reserprogram/reserprogram",
+    "pages/nav/nav",
+    "pages/schedule/schedule",
+    "pages/video_detail/video_detail",
+    "pages/studio/studio",
+    "pages/addcoach/addcoach",
+    "pages/usercoach/usercoach",
+    "pages/userinfo/userinfo",
+    "pages/usercenter/usercenter",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/mycoach/mycoach",
+    "pages/cs/cs",
+    "pages/studioinfo/studioinfo",
+    "pages/student/student",
+    "pages/punchlist/punchlist",
+    "pages/addreserprogram/addreserprogram",
+    "pages/addreserprogram/orderlist/orderlist",
+    "pages/addorder/addorder",
+    "pages/showToast/showToast",
+    "pages/programinfo/programinfo",
+    "pages/help/help",
+    "pages/video/video",
+    "pages/userpoints/userpoints",
+    "pages/userpoints/pointsinfo/pointsinfo",
+    "pages/userpoints/rule/rule",
+    "pages/userpoints/exchange/exchange",
+    "pages/studioshare/list",
+    "pages/studioshare/shareinfo/shareinfo",
+    "pages/studioshare/sharepage/sharepage",
+    "pages/studioshare/workshop/workshop",
+    "pages/basicinfo/basicinfo",
+    "pages/choosestudio/choosestudio",
+    "pages/reserprogram/addreserprogram/addreserprogram",
+    "pages/reserprogram/addreserprogram/orderlist/orderlist"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "乐打卡",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/reserprogram/reserprogram",
+        "text": "约课",
+        "iconPath": "images/class.png",
+        "selectedIconPath": "images/selectclass.png"
+      },
+      {
+        "pagePath": "pages/column/column",
+        "text": "成就",
+        "iconPath": "images/success.png",
+        "selectedIconPath": "images/selectsuccess.png"
+      },
+      {
+        "pagePath": "pages/userinfo/userinfo",
+        "text": "我",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me1.png"
+      }
+    ],
+    "color": "#000",
+    "selectedColor": "#4BC1D2",
+    "backgroundColor": "#fff"
+  }
+}

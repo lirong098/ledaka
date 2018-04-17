@@ -1,0 +1,145 @@
+.notice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+  color: #353535;
+}
+
+.notice_text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 15rpx;
+  background-color: white;
+}
+
+.notice_text_date {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 120rpx;
+  line-height: 120rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+
+.notice_text_date_text2 {
+  flex: 2;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  color: #b2b2b2;
+  margin-left: 30rpx;
+  overflow: hidden;
+}
+
+.notice_text_text {
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  margin-bottom: 30rpx;
+  font-size: 34rpx;
+  line-height: 50rpx;
+  letter-spacing: 2rpx;
+}
+
+.notice_text_img {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+
+.notice_text_img_view {
+  width: 79px;
+  height: 79px;
+  margin-right: 9px;
+  margin-bottom: 9px;
+}
+
+.notice_text_img_view_img {
+  width: 100%;
+  height: 100%;
+}
+
+.notice_view {
+  align-self: center;
+  height: 120rpx;
+  line-height: 120rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.notice_text_date1 {
+  font-size: 32rpx;
+  width: 180rpx;
+  margin-left: 30rpx;
+  text-align: left;
+}
+
+.notice_text_name1 {
+  height: 120rpx;
+  line-height: 120rpx;
+  flex: 1;
+  /*width:280rpx;*/
+  font-size: 32rpx;
+  color: #b2b2b2;
+  overflow: hidden;
+  text-align: left;
+  margin-right: 15rpx;
+  margin-left: 40rpx;
+}
+
+.notice_view_view {
+  color: red;
+  font-size: 32rpx;
+  text-align: right;
+  margin-right: 15rpx;
+}
+
+.notice_view_view2 {
+  height: 120rpx;
+  line-height: 40rpx;
+  margin-right: 15rpx;
+  font-size: 32rpx;
+  text-align: right;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow1 {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 30rpx;
+  float: right;
+}
+
+.notice_text_date_img {
+  margin-right: 15rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10%;
+}
+
+.notice_text_date_name {
+  font-size: 36rpx;
+  line-height: 45rpx;
+  flex: 2;
+  overflow: hidden;
+}
+
+.notice_text_date_text1 {
+  margin-left: 15rpx;
+  font-size: 32rpx;
+  color: #b2b2b2;
+}

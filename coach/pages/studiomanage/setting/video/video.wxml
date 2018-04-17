@@ -1,0 +1,25 @@
+<!--video.wxml-->
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+  上传中...
+</loading>
+<view class="container">
+
+  <view class="head">
+    <text>工作室介绍视频</text>
+  </view>
+
+  <video style="width:750rpx;height:420rpx;margin-top:35rpx;" src="{{src}}"></video>
+
+  <view class="tips">
+    <text>
+    注意事项：
+    1）视频尽量不要超过1分钟
+    2）建议采用MP4格式
+    </text>
+  </view>
+
+</view>
+
+<view class="edit-no">
+  <button bindtap="upload">上传视频</button>
+</view>

@@ -1,0 +1,28 @@
+<!--pages/usercenter/usercenter.wxml-->
+<scroll-view class="container" scroll-y="true">
+    <navigator class="username" url="../userinfo/userinfo">
+        <image class="icon" src="/images/me1.png"></image>
+        <text class="name">我的基本信息</text>
+        <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+    <navigator class="username" url="../usercoach/usercoach">
+        <image class="icon" src="/images/specialty.png"></image>
+        <text class="name">我的教练</text>
+        <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+    <navigator class="username" url="../studio/studio">
+        <image class="icon" src="/images/workshop.png"></image>
+        <text class="name">我的工作室</text>
+        <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+    <navigator class="username" url="../order/order">
+        <image class="icon" src="/images/type.png"></image>
+        <text class="name">我的会员卡</text>
+        <image  class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+    <navigator class="username">
+        <image class="icon" src="/images/back.png"></image>
+        <text class="name">对本软件的反馈与建议</text>
+        <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+</scroll-view>

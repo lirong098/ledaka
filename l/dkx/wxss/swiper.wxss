@@ -1,0 +1,100 @@
+/* 选中白底蓝字 未选中灰底灰字 */
+
+.swiper-title {
+  height: 100rpx;
+  width: 750rpx;
+  background-color: white;
+  font-size: 38rpx;
+  color: #353535;
+  overflow: hidden;
+}
+
+.swiper-tab {
+  width: 750rpx;
+  text-align: center;
+  line-height: 100rpx;
+  /*background-color: #f2f2f2;*/
+  color: #888;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.swiper-tab-list {
+  border-top: 1rpx solid #d8d8d8;
+  display: inline-block;
+  height: 100rpx;
+  width: 375rpx;
+  overflow: hidden;
+}
+
+.on {
+  color: #4bc1d2;
+  background-color: #fff;
+  height: 100rpx;
+}
+
+.other {
+  background-color: #ebeff3;
+}
+
+/* 蓝色下标版 */
+
+.swiper-title-blue {
+  height: 100rpx;
+  width: 750rpx;
+  background-color: white;
+  font-size: 38rpx;
+  color: #353535;
+  overflow: hidden;
+}
+
+.swiper-tab-blue {
+  width: 750rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #888;
+  height: 100rpx;
+  overflow: hidden;
+}
+
+.swiper-tab-list-blue {
+  display: inline-block;
+  height: 100rpx;
+  width: 375rpx;
+  overflow: hidden;
+}
+
+.on-blue {
+  color: #4bc1d2;
+  background-color: #fff;
+  height: 100rpx;
+}
+
+.other-blue {
+  background-color: #fff;
+}
+
+.on-blue .on-blue-line {
+  position: absolute;
+  top: 93rpx;
+  border-bottom: 5rpx solid #4bc1d2;
+  height: 5rpx;
+  width: 200rpx;
+}
+
+.other-blue .on-blue-line {
+  position: absolute;
+  left: 85rpx;
+  top: 93rpx;
+  border-bottom: 0;
+  height: 5rpx;
+  width: 200rpx;
+}
+
+.onplay {
+  display: block;
+}
+
+.ondisplay {
+  display: none;
+}

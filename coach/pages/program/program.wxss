@@ -1,0 +1,49 @@
+/* pages/program/program.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow:hidden;
+  /*background-color:#F7F9F8;*/
+  /*border-top:1rpx solid #D8D8D8;*/
+}
+.username{
+    height:100rpx;
+    line-height: 100rpx;
+    width: 750rpx;
+    border-bottom:1rpx solid #D8D8D8;
+    background-color:white;
+    font-size:13pt;
+    display: flex;
+    flex-direction: row;
+}
+.name{
+    margin-left:30rpx;
+    
+}
+ .view_text{
+     width:700rpx;
+ }
+.footer
+{
+    height:100rpx;
+    line-height: 100rpx;
+    position: fixed;
+    bottom: 0rpx;
+    border-radius: 5rpx;
+    width:750rpx;
+    background-color:#4BC1D2;   
+    text-align: center;
+    color:white;
+}
+.arrow{
+    width:26rpx;
+    height: 26rpx;
+    text-align: right;
+    margin-top:34rpx;
+    margin-right:30rpx;
+    margin-left:20rpx;
+}

@@ -1,0 +1,88 @@
+/* pages/punchlist/punchlist.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow:hidden;
+  border-top:4rpx solid #D8D8D8;
+  background-color:#F7F9F8;
+}
+.container_title{
+    height: 100rpx;
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white; 
+    /*margin-bottom:15rpx;*/
+}
+.container_title_top{
+    margin-left:30rpx; 
+    color:#4BC2D6;
+    font-size:30rpx;
+}
+.container_title_bottom{
+     margin-right:30rpx;
+     color:#4BC2D6; 
+     font-size:30rpx;
+}
+.notice{
+    background-color:white;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    margin-top:5rpx;
+    margin-bottom:5rpx;
+}
+.notice_text{
+    align-self: center;
+    height: 120rpx;
+    line-height: 80rpx;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom:3rpx solid #F7F9F8;
+}
+
+.notice_main{
+    align-self: center;
+    height: 80rpx;
+    line-height: 80rpx;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom:3rpx solid #F7F9F8;
+    background-color:#F5F5F5;
+}
+.notice_text_lesson{
+    font-size:34rpx;
+    flex:1;
+    text-align: center;
+}
+.notice_text_date{
+    font-size:34rpx;
+    flex:1;
+    text-align: center;
+}
+.arrow{
+    width:20rpx;
+    height: 35rpx;
+    margin-right:30rpx;
+}
+.notice_text_img{
+    margin-left:30rpx;
+    margin-right:15rpx; 
+    width:80rpx;
+    height:80rpx;
+}
+.notice_text_name{
+    flex:2;
+    font-size:36rpx;
+    overflow:hidden;
+    text-align: center;
+}

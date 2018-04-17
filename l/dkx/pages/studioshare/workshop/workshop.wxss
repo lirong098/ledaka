@@ -1,0 +1,64 @@
+/* workshop.wxss */
+
+.container {
+  height: 100%;
+}
+
+.contents {
+  height: 750rpx;
+  background-color: #fff;
+}
+
+.title {
+  width: 750rpx;
+  text-align: center;
+  color: #4bc1d2;
+  font-weight: 900;
+  padding-top: 80rpx;
+  font-size: 45rpx;
+}
+
+.tips {
+  width: 650rpx;
+  margin-left: 50rpx;
+  margin-top: 80rpx;
+  line-height: 55rpx;
+}
+
+.edit-no {
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+  color: white;
+}
+
+.edit-no button {
+  background-color: #4bc1d2;
+  border-radius: 0rpx;
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 60rpx;
+}
+
+.lable {
+  width: 200rpx;
+  margin-left: 20rpx;
+  text-align: right;
+}
+
+.ipt {
+  border-bottom: 1rpx solid #c2c2c2;
+  width: 450rpx;
+  height: 70rpx;
+  margin-top: -12rpx;
+}

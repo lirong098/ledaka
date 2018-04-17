@@ -1,0 +1,2 @@
+<!--pages/showToast/showToast.wxml-->
+<view class="showtoast">{{title}}</view>

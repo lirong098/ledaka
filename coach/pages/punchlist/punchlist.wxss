@@ -1,0 +1,51 @@
+/* pages/punchlist/punchlist.wxss */
+@import "../notice/notice.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  /*border-top:4rpx solid #D8D8D8;
+  background-color:#F7F9F8;*/
+}
+
+.container_title {
+  height: 100rpx;
+  width: 99%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15rpx;
+}
+
+.container_title_top {
+  border-left: 60rpx solid white;
+  color: #4bc2d6;
+  font-size: 36rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.container_title_bottom {
+  border-right: 60rpx solid white;
+  color: #4bc2d6;
+  font-size: 36rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.arrow {
+  width: 30rpx;
+  height: 35rpx;
+  margin-right: 30rpx;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+}

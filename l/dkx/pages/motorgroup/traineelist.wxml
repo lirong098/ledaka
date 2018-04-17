@@ -1,0 +1,23 @@
+    <view class="container_title">
+        <view class="container_title_top" bindtap="bindtopweek">
+            <image class="icon" src="/images/lt.png"></image>上月
+        </view>
+        <view class="container_title_datetime">
+            {{weekend}}
+        </view>
+        <view class="container_title_bottom" bindtap="bindbottomweek"><text style="margin-right:3rpx;">下月</text><image class="icon" src="/images/gt.png"></image></view>
+    </view>
+    <!--star notice-->
+    <view class="notice" >
+        <view wx:for="{{recordlist}}">
+            <navigator class="notice_text" url="../../recordlist/recordlist?trainee_id={{item.trainee_id}}&studiolist=1&studio_id={{studio_id}}&mouth={{mouth}}">
+                <!--<image class="notice_text_icon" src="{{item.icon}}"></image>-->
+                <text class="notice_text_icon">{{item.ranking_list}}</text>
+                <image class="notice_text_img" src="{{item.picture}}"></image>
+                <text class="notice_text_name">{{item.trainee_name}}</text>
+                <view class="notice_text_lesson"><text class="notice_text_lesson_text1">{{item.count}}</text><text class="notice_text_lesson_text2">次</text></view>
+                <image class="arrow" src="/images/arrow.png"></image>
+            </navigator>
+        </view>
+    </view>
+    <!--end notice-->

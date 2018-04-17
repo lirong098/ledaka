@@ -1,0 +1,71 @@
+<!--pages/usercenter/usercenter.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="username">
+    <image class="icon" src="/images/me.png"></image>
+    <text class="name">{{name}}</text>
+    <input name="name" bindblur="addname" value="{{coachid}}" placeholder-style="color:#b5b5b5;" placeholder="请输入你的姓名" />
+  </view>
+  <view class="username">
+    <image class="icon" src="/images/phone.png"></image>
+    <text class="name">{{phone}}</text>
+    <input name="name" bindblur="addphone" type="number" value="{{coach_phone}}" placeholder-style="color:#b5b5b5;" placeholder="请输入你的电话" />
+  </view>
+  <view class="username">
+    <image class="icon" src="/images/specialty.png"></image>
+    <text class="name">{{expertise}}</text>
+    <input name="name" bindblur="addspecialty" value="{{coach_expertise}}" placeholder-style="color:#b5b5b5;" placeholder="请输入你的专长" />
+  </view>
+
+  <!--<navigator class="username" url="../program/program" style="">
+        <image class="icon" src="/images/lesson.png"></image>
+        <text class="name">{{curriculum}}</text>
+        <image class="arrow" src="/images/arrow.png" ></image>
+    </navigator>-->
+  <view style="margin-top:36rpx;">
+    <!-- <navigator class="username" url="qrcode/qrcode">
+      <image class="icon" src="/images/add.png"></image>
+      <text class="name">新增学员</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator> -->
+
+    <!-- <view class="username" bindtap="addtrainee">
+      <image class="icon" src="/images/add.png"></image>
+      <text class="name">新增学员</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </view> -->
+    <!-- <navigator class="username" url="../managergroup/managergroup">
+      <image class="icon" src="/images/group.png"></image>
+      <text class="name">{{qrcode}}</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator> -->
+
+    <navigator class="username" url="../myinfo/myinfo">
+      <image class="icon" src="/images/myinfo.png"></image>
+      <text class="name">{{myinfo}}</text>
+      <image class="arrow" src="/images/arrow.png" bindtap="bindViewTapspecialty"></image>
+    </navigator>
+    <navigator class="username" url="../studio/studio">
+      <image class="icon" src="/images/yl.png"></image>
+      <text class="name">{{studio}}</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+
+    <navigator class="username" url="../card/card">
+      <image class="icon" src="/images/type.png"></image>
+      <text class="name">{{card}}</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+  </view>
+  <!--<view class="username">
+        <image class="icon" src="/images/back.png"></image>
+        <text class="name">{{advise}}</text>
+        <image class="arrow" src="/images/arrow.png"></image>
+    </view>-->
+  <view style="margin-top:36rpx;">
+    <navigator class="username" url="../help/help">
+      <image class="icon" src="/images/help.png"></image>
+      <text class="name">用户操作指南</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+  </view>
+</scroll-view>

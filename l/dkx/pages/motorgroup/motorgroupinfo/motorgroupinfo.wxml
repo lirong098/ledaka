@@ -1,0 +1,15 @@
+<!--pages/motorgroup/motorgroupinfo/motorgoupinfo.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="title"> <!--strat title-->
+        <view class="title_left">{{motorgroup_info.name}}</view>
+        <view class="title_right">{{motorgroup_info.qty}}人</view>
+  </view><!--end title-->
+  
+  <view class="main"><!--start main-->
+        <text style="background-color:#F7F9F8;color:#888888;font-size:36rpx;height:60rpx;line-height:60rpx; width:100%;padding-left:30rpx;">学员{{motorgroup_info.qty}}名</text>
+        <navigator class="notice-text"  bindtap="bindViewTap" wx:for="{{trainee_info}}" url="../../traineerecord/traineerecord?trainee_id={{item.id}}"> 
+            <image class="userlcon" src="{{item.picture}}" style="border-radius: 10%;"></image>
+            <text>{{item.trainee_name}}</text>
+        </navigator>
+  </view><!--end main-->
+</scroll-view>

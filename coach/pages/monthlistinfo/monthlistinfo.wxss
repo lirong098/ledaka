@@ -1,0 +1,43 @@
+/* pages/monthlistinfo/monthlistinfo.wxss */
+@import "../column/column.wxss";
+@import "../notice/notice.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #f7f9f8;
+}
+.container_title {
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ebeff3;
+  margin-top: 320rpx;
+}
+
+.icon {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.container_title_top {
+  border-left: 120rpx solid #ebeff3;
+  color: #4bc2d6;
+  font-size: 36rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.container_title_bottom {
+  border-right: 120rpx solid #ebeff3;
+  color: #4bc2d6;
+  font-size: 36rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}

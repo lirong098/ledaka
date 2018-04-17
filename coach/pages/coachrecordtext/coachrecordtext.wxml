@@ -1,0 +1,45 @@
+<!--pages/coachrecordtext/coachrecordtext.wxml-->
+ <form bindsubmit="formSubmit">
+  <scroll-view class="container" scroll-y="false">
+    <view class="main">
+      <view class="main_view">
+        <textarea name="coach_comments" class="main_text_info" placeholder="请输入教练备注" placeholder-style="color:#888888;" value="{{coach_comments}}" maxlength="200" />
+        <text class="main_view_text">限200字</text>
+      </view>
+      <include  src="../showToast/showToast.wxml" wx:if="{{showToast}}"/>
+      <view class="weui-cells">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+                <view class="weui-uploader__title">图片上传</view>
+                <view class="weui-uploader__info">{{files.length}}/9</view>
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for="{{files}}" wx:key="*this">
+                                    <view class="weui-uploader__file"  id="{{item}}">
+                                        <image class="weui-uploader__img" bindtap="previewImage" src="{{item}}" id="{{item}}" mode="aspectFill" />
+                                        <view class="weui-uploader__im_view" bindtap="deleteimage" data-index="{{index}}" data-name="files"><image class="deleimg" src="/images/delete.png"></image></view>
+                                    </view>
+                                </block>
+                                <block wx:for="{{addfiles}}" wx:key="*this">
+                                    <view class="weui-uploader__file"  id="{{item}}">
+                                        <image class="weui-uploader__img" bindtap="previewImage" src="{{item}}" id="{{item}}" mode="aspectFill" />
+                                        <view class="weui-uploader__im_view" bindtap="deleteimage" data-index="{{index}}" data-name="addfiles"><image class="deleimg" src="/images/delete.png"></image></view>
+                                    </view>
+                                </block>
+                </view>
+                <view class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--end main-->
+  </scroll-view>
+  <button formType="submit">保存</button>
+</form>

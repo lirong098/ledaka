@@ -1,0 +1,59 @@
+<!--pages/addprogram/addprogram.wxml-->
+<!--pages/addprogram/addprogram.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <scroll-view class="container" scroll-y="true">
+    <view class="head">
+      <view class="logo">
+        <!--<view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+        </view>-->
+        
+        <image class="logoimage" src="{{https}}{{source}}" bindtap="chooseImage"></image>
+        <input name="logo" value="{{source}}" style="display:none;" />
+      </view>
+
+      <view class="head_right">
+        <view class="classname">
+          <input name="name" placeholder-style="color:#b5b5b5;" placeholder="请填写课程名称" value="{{program.program_name}}" style="border:none;color:#353535;font-size:36rpx;"/>
+        </view>
+
+        <!--<view class="type">
+          <input name="type" placeholder-style="color:#b5b5b5;" placeholder="请填写课程类型" value="{{program_name}}" />
+        </view>-->
+
+      </view>
+    </view>
+
+    <!--<view class="desc">
+          <input name="desc" placeholder-style="color:#b5b5b5;" placeholder="请填写一句话的课程介绍" value="{{program_name}}" />
+        </view>-->
+
+    <view class="introduce">
+      <text name="introduce">{{program.introduction}}</text>
+    </view>
+
+    <view class="images">
+      <view class="weui-cells">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <view class="weui-uploader">
+              <view class="weui-uploader__hd">
+
+              </view>
+              <view class="weui-uploader__bd">
+                <view class="weui-uploader__files" id="uploaderFiles">
+                  <block wx:for-items="{{files}}" wx:key="{{index}}">
+                    <view class="weui-uploader__file" id="{{https}}{{item}}">
+                      <image class="weui-uploader__img" src="{{https}}{{item}}" mode="aspectFit" bindtap="previewImage" id="{{https}}{{item}}" />
+                    </view>
+                  </block>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>
+</form>

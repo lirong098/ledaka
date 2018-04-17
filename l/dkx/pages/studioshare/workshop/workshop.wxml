@@ -1,0 +1,33 @@
+<!--workshop.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="container">
+
+    <view class="contents">
+      <view class="title">
+        <text>{{studioname}}欢迎你！</text>
+      </view>
+
+      <view class="tips">
+        <text>我们将竭力为您打造愉快美好的健身体验。请输入您的联系方式，我们的教练将和您联系并为您做详细的介绍。</text>
+      </view>
+
+      <view class="info">
+        <view class="item">
+          <view class="lable">姓名：</view>
+          <input name="name" class="ipt" placeholder="请输入姓名" value="{{username}}"/>
+        </view>
+        <view class="item">
+          <view class="lable">手机：</view>
+          <input name="phone" class="ipt" type="number" placeholder="请输入手机" value="{{phone}}" />
+        </view>
+
+      </view>
+    </view>
+
+
+  </view>
+
+  <view class="edit-no">
+    <button formType="submit">完成</button>
+  </view>
+</form>

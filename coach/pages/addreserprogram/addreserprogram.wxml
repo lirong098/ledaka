@@ -1,0 +1,67 @@
+<!--pages/addreserprogram/addreserprogram.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <scroll-view class="{{schedule['scrclass']}}">
+    <view class="nav">
+      <view class="{{navl}}" bindtap="bindnavleft">
+        <text>排团课</text>
+      </view>
+      <view class="{{navr}}" bindtap="bindnavright">
+        <text>代约私教</text>
+      </view>
+    </view>
+    <picker mode="selector" bindchange="bindPickerChange" value="{{programindex}}" range="{{program}}" range-key="program_name" disabled="{{schedule['disadled']}}">
+      <view class="username">
+        <text class="name">{{lesson}}</text>
+        <text class="userpicker">{{program[programindex]['program_name']}}{{schedule['program_name']}}</text>
+        <input class="usergender" name="program_id" value="{{schedule['program_id']}}{{program[programindex]['id']}}" />
+        <input class="usergender" name="program_name" value="{{program[programindex]['program_name']}}" />
+      </view>
+    </picker>
+    <navigator class="username" wx:if="{{traineeshow}}" url="./traineelist/traineelist?programindex={{programindex}}&time={{time}}&end_time={{end_time}}&date={{date}}">
+      <text class="name">学员</text>
+      <text class="userpicker">{{trainee_name}}</text>
+      <input class="usergender" name="trainee_id" value="{{trainee_id}}" />
+      <input class="usergender" type="number" name="manqty" value="1" />
+    </navigator>
+    <picker mode="date" bindchange="bindDateChange" value="{{date}}" start="2017-01-01" end="2030-12-31" disabled="{{schedule['disadled']}}">
+      <view class="username">
+        <text class="name">{{classdate}}</text>
+        <text class="userpicker">{{date}}</text>
+        <input class="usergender" name="date" value="{{date}}" disabled="true" />
+      </view>
+    </picker>
+
+    <picker mode="time" value="{{time}}" start="6:00" end="24:00" bindchange="bindTimeChange" disabled="{{schedule['disadled']}}">
+      <view class="username">
+        <text class="name">{{classtime}}</text>
+        <text class="userpicker">{{time}}{{schedule['start_time']}}</text>
+        <input class="usergender" name="time" value="{{time}}" disabled="true" />
+      </view>
+    </picker>
+
+    <picker mode="time" value="{{end_time}}" start="6:00" end="24:00" bindchange="bindEndTimeChange" disabled="{{schedule['disadled']}}">
+      <view class="username">
+        <text class="name">{{classendtime}}</text>
+        <text class="userpicker">{{end_time}}{{schedule['end_time']}}</text>
+        <input class="usergender" name="end_time" value="{{end_time}}" disabled="true" />
+      </view>
+    </picker>
+    <picker mode="selector" bindchange="bindStudioChange" value="{{studio_index}}" range="{{studio}}" range-key="studio_name">
+      <view class="username">
+        <text class="name">{{address}}</text>
+        <text class="userpicker">{{studio[studio_index].studio_name}}</text>
+        <input class="usergender" type="number" name="studio_id" value="{{studio[studio_index].id}}" />
+      </view>
+    </picker>
+    <view class="username" wx:if="{{qtyshow}}">
+      <text class="name">{{classman}}</text>
+      <input type="number" name="manqty" value="5" />
+    </view>
+    <view class="username" wx:if="{{traineeshow}}" bindtap="bindorderlist">
+      <text class="name">{{mycrad}}</text>
+      <text class="userpicker">{{seorder_name}}</text>
+      <input class="usergender" name="seorder_id" value="{{seorder_id}}" />
+    </view>
+  </scroll-view>
+  <button class="{{schedule['butclass']}}" formType="{{schedule['sub']}}">{{reserprogram}}</button>
+</form>

@@ -1,0 +1,38 @@
+/* pages/managergroup/managergroup.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  /*background-color:#F7F9F8;*//*border-top:1rpx solid #D8D8D8;*/
+}
+
+.username {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+  font-size: 36rpx;
+}
+
+.name {
+  margin-left: 30rpx;
+}
+
+.footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background-color: #4bc1d2;
+  color: white;
+  font-size: 40rpx;
+  width: 100%;
+  border-radius: 0rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}

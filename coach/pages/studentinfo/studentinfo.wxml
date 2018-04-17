@@ -1,0 +1,147 @@
+<!--pages/studentinfo/studentinfo.wxml-->
+<scroll-view class="container" scroll-y="true" style="height:{{boxheight+100}}">
+  <view class="notice-text">
+    <image class="userlcon" src="{{traineeinfo['0'].picture}}"></image>
+    <view class="news">
+      <view class="news-top">
+        <!--{{traineeinfo['1'].trainee_name}}-->
+        <text style="margin-top:16rpx;">{{traineeinfo['1'].trainee_name}}</text>
+        <text style="margin-top:16rpx;"></text>
+        <text style="margin-top:16rpx;">{{traineeinfo['0'].sex}}</text>
+      </view>
+      <view class="news-middle">
+        <text class="news_middle_text">昵称：{{traineeinfo['0'].trainee_nickname}}</text>
+        <text class="news_middle_text2">{{traineeinfo['0'].company}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="username" id="usernamefrist">
+    <image class="icon" src="/images/me.png"></image>
+    <text class="name">{{name}}</text>
+    <input bindblur="addname" value="{{traineeinfo['1'].trainee_name}}" style="font-size:36rpx;" />
+  </view>
+  <picker mode="date" value="{{date}}" start="1940-01-01" end="2030-12-31" bindchange="bindDateChange">
+    <view class="username">
+      <image class="icon" src="/images/birthday.png"></image>
+      <text class="name">生日</text>
+      <text class="brithd">{{date}}</text>
+    </view>
+  </picker>
+  <view class="username">
+    <image class="icon" src="/images/phone.png"></image>
+    <text class="name">电话</text>
+    <input type="number" bindblur="addphone" style="font-size:36rpx;" value="{{traineeinfo['1'].trainee_phone}}" />
+  </view>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{grouparray}}" range-key="group_name">
+    <view class="username">
+      <image class="icon" src="/images/group.png"></image>
+      <text class="name">学员组</text>
+      <text class="stu">{{grouparray[index]['group_name']}}</text>
+    </view>
+  </picker>
+  <view style="margin-top:36rpx;">
+    <navigator class="username1" url="../monthlistinfo/monthlistinfo?trainee_id={{trainee_id}}&yearweek1=0&msg=1">
+      <image class="icon1" src="/images/dk.png"></image>
+      <text class="name1">打卡记录</text>
+      <image class="arrow1" src="/images/arrow.png"></image>
+      <text class="text_info"></text>
+    </navigator>
+  </view>
+  <navigator class="username1" url="../order/order?trainee_id={{traineeinfo['0'].id}}&from={{isfrom}}&studio_id={{studio_id}}">
+    <image class="icon1" src="/images/type.png"></image>
+    <text class="name1">会员卡记录</text>
+    <image class="arrow1" src="/images/arrow.png"></image>
+    <text class="text_info"></text>
+  </navigator>
+  <navigator class="username1" url="../userpoints/pointsinfo/pointsinfo?trainee_id={{trainee_id}}">
+    <image class="icon1" src="/images/jifenlist.png"></image>
+    <text class="name1">会员积分</text>
+    <image class="arrow1" src="/images/arrow.png"></image>
+    <text class="text_info">{{info.points}}</text>
+  </navigator>
+
+  <!-- <view class="from">
+    <view class="from_top">
+      <image class="from_icon" src="/images/from1.png"></image>
+      <text>来源</text>
+      <text>{{trainee.from_text}}</text>
+    </view>
+    <view class="from_bottom">
+      <text>{{trainee.from_name}}</text>
+      <image src="{{trainee.from_picture}}"></image>
+    </view>
+  </view> -->
+
+
+  <!-- <view class="from">//下方有信息则显示，无则不显示
+    <view class="from_top">
+      <image class="from_icon" src="/images/from1.png"></image>
+      <text>来源</text>
+      <text>{{trainee.from_text}}</text>
+    </view>
+    <view wx:if="{{trainee.from_name!==''}}">
+      <view class="from_bottom">
+        <text>{{trainee.from_name}}</text>
+        <image src="{{trainee.from_picture}}"></image>
+      </view>
+    </view>
+    <view wx:else></view>
+  </view> -->
+
+
+  <!-- <image class="icon1" src="/images/remark.png"></image> -->
+  <text class="name1" style="margin-top:6rpx;margin-bottom:8rpx;margin-left:25rpx;font-size:36rpx;">备注</text>
+
+
+
+  <view class="remark">
+    <navigator class="remark_top" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{target}}&type=target">
+      <image class="icon2" src="/images/bz1.png"></image>
+      <text class="name1">目标</text>
+      <view class="remark_top_button">
+        <image class="arrow2" src="/images/arrow.png"></image>
+      </view>
+    </navigator>
+    <view class="remark_bottom">
+      {{target}}
+    </view>
+  </view>
+  <view class="remark">
+    <navigator class="remark_top" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{situation}}&type=situation">
+      <image class="icon2" src="/images/bz2.png"></image>
+      <text class="name1">现状</text>
+      <view class="remark_top_button">
+        <image class="arrow2" src="/images/arrow.png"></image>
+      </view>
+    </navigator>
+    <view class="remark_bottom">
+      {{situation}}
+    </view>
+  </view>
+  <view class="remark">
+    <navigator class="remark_top" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{preferences}}&type=preferences">
+      <image class="icon2" src="/images/bz3.png"></image>
+      <text class="name1">锻炼偏好</text>
+      <view class="remark_top_button">
+        <image class="arrow2" style="" src="/images/arrow.png"></image>
+      </view>
+    </navigator>
+    <view class="remark_bottom">
+      {{preferences}}
+    </view>
+  </view>
+  <view class="remark">
+    <navigator class="remark_top" url="../coachtraineetext/coachtraineetext?trainee_id={{trainee_id}}&text={{other}}&type=other">
+      <image class="icon2" src="/images/bz4.png"></image>
+      <text class="name1">其他</text>
+      <view class="remark_top_button">
+        <image class="arrow2" src="/images/arrow.png"></image>
+      </view>
+    </navigator>
+    <view class="remark_bottom">
+      {{other}}
+    </view>
+  </view>
+
+  <view class="footer" bindtap="binddeletetap">{{deletestudent}}</view>
+</scroll-view>

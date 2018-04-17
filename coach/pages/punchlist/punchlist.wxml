@@ -1,0 +1,14 @@
+<!--pages/punchlist/punchlist.wxml-->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="loadMore">
+    <view class="container_title">
+        <view class="container_title_top" bindtap="bindtopweek" style="width:160rpx;text-align:left;">
+           <image class="icon" src="/images/lt.png"></image><text class="week">上周</text>
+        </view>
+        <view class="container_title_datetime">
+            {{weekend}}
+        </view>
+        <view class="container_title_bottom" bindtap="bindbottomweek" style="width:160rpx;text-align:right;"><text style="margin-right:10rpx;">下周</text><image class="icon" src="/images/gt.png"></image>
+        </view>
+    </view>
+    <include src="../notice/notice.wxml"/>
+</scroll-view>

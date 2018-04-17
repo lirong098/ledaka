@@ -1,0 +1,53 @@
+.fullcalendar-header{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+    margin-top: 180rpx;
+}
+image{
+    width:26rpx;
+    height:26rpx;
+}
+.fullcalendar-header .fullcalendar-header__button{
+    background-color:transparent;
+    line-height:1; 
+    padding:6rpx;
+}
+.fullcalendar-header .fullcalendar-header__button:hover{
+    background-color:#eee;
+}
+.calendar-week.calendar-week-header{
+    /*background-color:white;*/
+    font-size:12px;
+}
+.calendar-week.calendar-week-header .calendar-day{
+    /*justify-content: space-between;*/
+    width:14.29%;
+    height:10rpx;
+    line-height: 15rpx;
+    padding:30rpx 0;
+    text-align: center;
+    background-color:#4bc2d1;
+    color:white;
+    font-size:34rpx;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+.calendar-week{
+    background-color:#eee;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+.calendar-day{
+    /* justify-content: space-between; */
+    width:14.29%;
+    padding:30rpx 0;
+    text-align: center;
+    background-color:white;
+  
+}
+.calendar-day:hover{
+    background-color:lightblue;
+}
+.fullCalendar-body{border-bottom:1px solid #eee;}

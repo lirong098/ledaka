@@ -1,0 +1,71 @@
+<!--pages/addstudio/addstudio.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="container">
+
+    <view class="username">
+      <text class="name">工作室名称</text>
+      <input name="studio_name" placeholder="请填写工作室名称" placeholder-style="color:#b5b5b5;" value="{{studio.studio_name}}" />
+    </view>
+
+    <view class="username">
+      <text class="name">工作室地址</text>
+      <input name="studio_address" placeholder="请填写工作室地址" placeholder-style="color:#b5b5b5;" value="{{studio.address}}" />
+    </view>
+
+    <view class="username">
+      <text class="name">联系电话</text>
+      <input name="studio_phone" placeholder="请填写工作室联系电话" placeholder-style="color:#b5b5b5;" value="{{studio.phone}}" />
+    </view>
+
+    <navigator class="username" url="/pages/studiomanage/setting/video/video?studio_id={{studio_id}}">
+      <text class="namelong">工作室介绍视频</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+
+    <view class="introduce">
+      <textarea name="studio_introduce" placeholder-style="color:#b5b5b5;" placeholder="填写工作室详细介绍" value="{{studio.introduce}}" maxlength="450" />
+    </view>
+
+    <scroll-view class="scroll_box" scroll-y="true">
+      <view class="logo">
+        <text class="tips">添加工作室形象图片</text>
+        <view class="tips_img weui-uploader__input-box">
+          <image class="logoimage" src="{{https}}{{source}}" bindtap="chooseImage" mode="aspectFill"></image>
+        </view>
+        <input name="logo" value="{{source}}" style="display:none;" />
+      </view>
+
+      <view class="images">
+        <view class="weui-cells">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <view class="weui-uploader">
+                <view class="weui-uploader__hd">
+                  <view class="weui-uploader__title">添加工作室详细介绍图片</view>
+                  <view class="weui-uploader__info">{{files.length}}/9</view>
+                </view>
+                <view class="weui-uploader__bd">
+                  <view class="weui-uploader__files" id="uploaderFiles">
+                    <block wx:for-items="{{files}}" wx:key="{{index}}">
+                      <view class="weui-uploader__file" id="{{https}}{{item}}">
+                        <image class="weui-uploader__img" src="{{https}}{{item}}" mode="aspectFill" bindtap="previewImage" id="{{https}}{{item}}" />
+                        <view class="weui-uploader__im_view" bindtap="deleteimage" data-index="{{index}}">
+                          <image class="deleimg" src="/images/delete.png"></image>
+                        </view>
+                      </view>
+                    </block>
+                  </view>
+                  <view class="weui-uploader__input-box">
+                    <view class="weui-uploader__input" bindtap="uploadImage"></view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+  <button formType="submit">保存</button>
+</form>

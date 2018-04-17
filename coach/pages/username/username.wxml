@@ -1,0 +1,7 @@
+<!--pages/username/username.wxml-->
+<scroll-view class="container" scroll-y="true">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <input name="name" bindblur ="formSubmit" placeholder="请填写您的姓名" />
+        <button formType="submit">保存</button>
+    </form>
+</scroll-view>

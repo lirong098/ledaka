@@ -1,0 +1,17 @@
+<!--exchange.wxml-->
+<scroll-view class="contents" scroll-y="true">
+  <view style="width:750rpx;height:80rpx;"></view>
+  <view class="content">
+    <view class="item_class" wx:for="{{rule}}" wx:for-item="item">
+      <text class="item_text_name">{{item.rule_name}}</text>
+      <text class="item_number">{{item.points}}</text>
+      <!--<text class="item_text_points">{{item.points}}</text>-->
+      <button data-eid="{{item.id}}" bindtap="clickExchange">兑换</button>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="title">
+  <text class="t1">积分</text>
+  <text class="t2"></text>
+</view>

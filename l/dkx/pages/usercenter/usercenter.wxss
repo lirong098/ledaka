@@ -1,0 +1,53 @@
+/* pages/usercenter/usercenter.wxss */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow:hidden;
+  background-color:#F7F9F8;
+  border-top:1rpx solid #D8D8D8;
+}
+.username{
+    height:100rpx;
+    line-height: 100rpx;
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    border-bottom:1rpx solid #D8D8D8;
+    background-color:white;
+}
+.icon {
+    width:40rpx;
+    height: 40rpx;
+    margin-top:28rpx;
+    margin-left:30rpx;
+}
+.arrow{
+    width:20rpx;
+    height: 35rpx;
+    margin-top:34rpx;
+    margin-right:30rpx;
+    margin-left:20rpx;
+    /*border:1rpx solid red;*/
+}
+.name{
+    font-size:36rpx;
+    color:#000000;
+    width:600rpx;
+    margin-left:15rpx;
+    /*border:1rpx solid red;*/
+}
+.container view:nth-child(5){
+    margin-bottom:40rpx;
+    border:none;
+}
+.container view:nth-child(6){
+    margin-bottom:40rpx;
+    border:none;
+}
+.container view:nth-child(7){
+    border:none;
+}

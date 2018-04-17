@@ -1,0 +1,82 @@
+<!--pages/studioinfo/studioinfo.wxml-->
+<scroll-view class="container" scroll-y="true">
+
+  <view class="title">
+    <view class="title_left">
+      <image class="title_left_img" src="{{https}}{{studioinfo.logo}}" style="border-radius: 10%;" mode="aspectFill" bindtap="previewImage" id="{{https}}{{studioinfo.logo}}"></image>
+    </view>
+    <view class="title_right">
+      <text class="title_left_name">{{studioinfo.studio_name}}</text>
+      <!-- <image class="title_adds_img" src="/images/img/workshop.png"></image> -->
+     
+
+      <view class="title_phone" bindtap="calling" wx:if="{{studioinfo.phone_show == 1}}">
+        <!-- <image class="title_phone_img" src="/images/phone.png"></image> -->
+        <text class="title_phone_text">{{studioinfo.phone}}</text>
+      </view>
+
+       <view class="title_left_adds">
+        <text>{{studioinfo.address}}</text>
+      </view>
+
+      <view class="qrcode" bindtap="previewQRcode">
+        <image mode="aspectFill"  style="border-radius: 10%;" src="{{qrcode}}"></image>
+      </view>
+    </view>
+
+  </view>
+
+  <view class="main">
+    <view class="swiper-tab">
+
+      <view class="swiper-tab-list" data-current="0" bindtap="swichNav">
+        <view class="{{currentTab==0 ? 'on' : 'other'}}">工作室介绍</view>
+        <view style="height:6rpx;width:200rpx;background-color:#4bc1d2;margin-left:86rpx;"></view>
+      </view>
+      <view class="swiper-tab-list" data-current="1" bindtap="swichNav">
+        <view class="{{currentTab==1 ? 'on' : 'other'}}">教练</view>
+        <view style="height:6rpx;width:100rpx;background-color:#4bc1d2;margin-left:136rpx;"></view>
+      </view>
+
+      <!-- <view class="swiper-tab-list {{currentTab==0 ? 'on' : 'other'}}" data-current="0" bindtap="swichNav">工作室介绍</view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : 'other'}}" data-current="1" bindtap="swichNav">教练</view> -->
+    </view>
+  </view>
+
+  <view class="conent1 {{currentTab==1 ? 'ondisplay' : ''}}">
+    <view class="main_text">
+      <text class="main_text_text">{{studioinfo.introduce}}</text>
+    </view>
+    <view class="view_image">
+      <image class="view_image_img" wx:for="{{files}}" wx:for-item="item" src="{{https}}{{item}}" id="{{https}}{{item}}" bindtap="previewImage" mode="aspectFill"></image>
+    </view>
+  </view>
+
+  <view class="conent2 {{currentTab==0 ? 'ondisplay' : ''}}">
+    <navigator class="item_class" wx:for="{{coachinfo}}" wx:for-item="item" url="../myinfo/myinfo?id={{item.id}}">
+      <image class="item_class_img" src="{{item.picture}}" style="border-radius: 10%;"></image>
+      <text class="item_text_name">{{item.coach_name}}</text>
+      <text class="item_text_desc">{{item.expertise}}</text>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+  </view>
+
+</scroll-view>
+
+<view class="edit-no {{currentTab==0 ? 'onplay' : 'ondisplay'}}" wx:if="{{ismystudio == 1}}">
+  <button open-type="share" bindtap="bindonShare">邀请教练</button>
+</view>
+<view class="edit-no" wx:if="{{ismystudio == 2}}">
+  <button bindtap="joinstudio">加入工作室</button>
+</view>
+
+<!--2017-06-15 10:52 lr  <navigator class="edit-my-right {{currentTab==0 ? 'onplay' : 'ondisplay'}}" url="../addstudio/addstudio?studio_id={{studio_id}}" wx:if="{{ismystudio == 1}}">
+  <view class="btn2 isbtn">修改信息</view>
+</navigator>-->
+<view class="edit-my-left {{currentTab==0 ? 'onplay' : 'ondisplay'}}" bindtap="update_coach_studio" wx:if="{{ismystudio == 0}}">
+  <view class="btn2 isbtn">退出工作室</view>
+</view>
+
+<navigator class="edit-my-right {{currentTab==0 ? 'onplay' : 'ondisplay'}}" wx:if="{{ismystudio == 0}}">
+  <button class="btn1" open-type="share" bindtap="bindonShare">邀请教练</button>
+</navigator>

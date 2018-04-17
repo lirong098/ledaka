@@ -1,0 +1,19 @@
+<block wx:if="{{musicshow}}">
+  <swiper autoplay="{{autoplay}}" interval="3000" class="swiper_img" circular="true" bindchange="bindSwiper" style="{{swiper_style}}"> 
+      <block wx:for="{{imgUrls}}">
+        <swiper-item class="swiper_img_item">
+          <image src="{{imagesurl}}{{item.url}}" class="slide-image" mode="aspectFill"/>
+          <view class="swiper_view">
+            <text class="swiper_date">{{item.date}}</text>
+            <text class="swiper_text">{{item.comments}}</text>
+          </view>
+        </swiper-item>
+      </block>
+  </swiper>
+  <view class="photo_icon">
+    <image src="/images/Music.png" style="margin-top:30rpx;" bindtap="music_list_show"></image>
+    <image class="photo_icon_play" style="height:120rpx;width:120rpx;" src="{{play}}" bindtap="{{buttonbind}}"></image>
+    <image src="{{mute}}" style="margin-top:30rpx;" bindtap="{{audiobind}}"></image>
+  </view>
+  <button open-type="share"  bindtap="bindssss">分享给朋友</button>
+</block>

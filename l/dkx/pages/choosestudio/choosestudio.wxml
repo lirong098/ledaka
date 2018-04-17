@@ -1,0 +1,14 @@
+<!--choosestudio.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="username" wx:for="{{array}}">
+      <image class="icon" src="{{https}}{{item.logo}}" style="border-radius: 10%;"></image>
+      <text class="name">{{item.studio_name}}</text>
+      <radio class="arrow" value="{{item.id}}" color="#4bc1d2" />
+    </label>
+  </radio-group>
+</scroll-view>
+
+<view class="edit-no">
+  <button bindtap="sure">确定</button>
+</view>

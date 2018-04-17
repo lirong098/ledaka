@@ -1,0 +1,57 @@
+<!--pages/notice/notice.wxml-->
+<!--star notice-->
+<view class="notice">
+  <view class="notice_text" wx:for="{{recordlist}}">
+    <block wx:if="{{item.comments == 1}}">
+      <navigator url="../recordtext/recordtext?record_id={{item.id}}">
+        <view class="notice_view" wx:if="{{status == 1}}">
+          <image src="{{item.picture}}" class="notice_text_date_img" style="margin-left:30rpx;"></image>
+          <text class="notice_text_date_name">{{item.trainee_name}}</text>
+          <text class="notice_text_date_text2">{{item.program_name}}</text>
+          <text class="notice_text_date_text1" style="margin-right:30rpx;">{{item.class_date}}</text>
+          <image class="arrow1" src="/images/arrow.png" mode="aspectFill"></image>
+        </view>
+        <view class="notice_view" wx:else>
+          <!--{{item.start_time}}-->
+          <text class="notice_text_date1">{{item.class_date}}</text>
+          <text class="notice_text_name1">{{item.program_name}}</text>
+          <view class="notice_view_view2" style="color:#b2b2b2;" wx:if="{{msg ==1}}">
+
+            <text style="color:#b2b2b2;margin-top:40rpx;" wx:if="{{item.status_text == ''}}">{{item.coach_name}}</text>
+            <text style="color:#b2b2b2;margin-top:30rpx;" wx:else>{{item.coach_name}}</text>
+            <text style="color:red;">{{item.status_text}}</text>
+          </view>
+          <text class="notice_view_view" wx:else>{{item.status_text}}</text>
+          <image class="arrow1" src="/images/arrow.png"></image>
+        </view>
+        <view class="notice_text_text">{{item.trainee_comments}}</view>
+        <view class="notice_text_img">
+          <view class="notice_text_img_view" wx:for="{{item.url}}" wx:for-item="it">
+            <image class="notice_text_img_view_img" src="{{url}}{{it}}" mode="aspectFill"></image>
+          </view>
+        </view>
+      </navigator>
+    </block>
+    <block wx:if="{{item.comments == 0}}">
+      <navigator class="notice_view" url="../coachrecordtext/coachrecordtext?record_id={{item.id}}&coach_comments=" wx:if="{{status == 1}}">
+        <image src="{{item.picture}}" style="margin-left:30rpx;" class="notice_text_date_img" mode="aspectFill"></image>
+        <text class="notice_text_date_name">{{item.trainee_name}}</text>
+        <view class="notice_text_date_text2">{{item.program_name}}</view>
+        <view class="notice_text_date_text1" style="margin-right:30rpx;">{{item.class_date}}</view>
+        <image class="arrow1" src="/images/arrow.png"></image>
+      </navigator>
+      <navigator class="notice_view" url="{{coach_id == item.coach_id ? '../coachrecordtext/coachrecordtext?record_id='+item.id+'&coach_comments=': ' ' }}" wx:else>
+        <view class="notice_text_date1">{{item.class_date}}</view>
+        <view class="notice_text_name1">{{item.program_name}}</view>
+        <view class="notice_view_view2" style="color:#b2b2b2;" wx:if="{{msg ==1}}">
+          <text style="color:#b2b2b2;margin-top:40rpx;" wx:if="{{item.status_text == ''}}">{{item.coach_name}}</text>
+          <text style="color:#b2b2b2;margin-top:30rpx;" wx:else>{{item.coach_name}}</text>
+          <text style="color:red;">{{item.status_text}}</text>
+        </view>
+        <text class="notice_view_view" wx:else>{{item.status_text}}</text>
+        <image class="arrow1" src="/images/arrow.png"></image>
+      </navigator>
+    </block>
+  </view>
+</view>
+<!--end notice-->

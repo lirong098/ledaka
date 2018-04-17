@@ -1,0 +1,152 @@
+/* edit.wxss */
+
+.logo {
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+}
+
+.tips {
+  position: absolute;
+  width: 450rpx;
+  font-size: 36rpx;
+  color: #000;
+  left: 20rpx;
+  top: 20rpx;
+}
+
+.logoimage {
+  width: 750rpx;
+  height: 260rpx;
+}
+
+.weui-uploader__input-box {
+  float: left;
+  position: relative;
+  /* margin-right: 9px; *//* margin-bottom: 9px; */
+  width: 750rpx;
+  height: 260rpx;
+  border: 1px solid #d9d9d9;
+}
+
+.weui-uploader__input-box:before, .weui-uploader__input-box:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #999;
+}
+
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 39.5px;
+}
+
+.weui-uploader__input-box:after {
+  width: 39.5px;
+  height: 2px;
+}
+
+.weui-uploader__input-box:active {
+  border-color: #999;
+}
+
+.weui-uploader__input-box:active:before, .weui-uploader__input-box:active:after {
+  background-color: #999;
+}
+
+.tips_title {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.title {
+  background-color: #fff;
+  margin-top: 10rpx;
+  height: 80rpx;
+}
+
+.ipt {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+
+.content {
+  background-color: #fff;
+  margin-top: 10rpx;
+  height: 260rpx;
+  width: 750rpx;
+  color: #999;
+}
+
+.area {
+  width: 710rpx;
+  margin-left: 20rpx;
+  height: 220rpx;
+  overflow: hidden;
+  color: #999;
+}
+
+.wish {
+  background-color: #fff;
+  margin-top: 10rpx;
+  height: 150rpx;
+  width: 750rpx;
+  color: #999;
+}
+
+.wisharea {
+  width: 710rpx;
+  margin-left: 20rpx;
+  height: 120rpx;
+  overflow: hidden;
+  color: #999;
+}
+
+button {
+  background-color: #4bc1d2;
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+  color: white;
+  font-size: 40rpx;
+  border-radius: 0rpx;
+}
+
+.btn_left {
+  position: fixed;
+  bottom: -1rpx;
+  left: 0rpx;
+  width: 49.9%;
+  background-color: #81d8d0;
+  border-radius: 0rpx;
+  color: white;
+}
+
+.btn_right {
+  position: fixed;
+  bottom: -1rpx;
+  left: 50%;
+  width: 49.9%;
+  background-color: #4bc1d2;
+  border-radius: 0rpx;
+  color: white;
+}
+
+.edit-no {
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+  color: white;
+}
+
+.edit-no button {
+  background-color: #4bc1d2;
+  border-radius: 0rpx;
+  color: #fff;
+}

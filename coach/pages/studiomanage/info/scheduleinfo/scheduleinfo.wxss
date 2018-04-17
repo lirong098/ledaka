@@ -1,0 +1,101 @@
+/* pages/studiomanage/info/scheduleinfo/scheduleinfo.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1rpx solid #d8d8d8;
+}
+
+.TraNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 750rpx;
+  height: 120rpx;
+  background-color: white;
+  line-height: 120rpx;
+  border-top: 1rpx solid #d8d8d8;
+  border-bottom: 1rpx solid #d8d8d8;
+}
+
+.TraNav_left {
+  flex: 1;
+  height: 100%;
+  line-height: 60rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 36rpx;
+}
+
+.TraNav_left_bottom {
+  height: 7rpx;
+  background-color: #4bc1d2;
+  width: 200rpx;
+  position: absolute;
+  bottom: -1rpx;
+  left: 86rpx;
+}
+
+.navstudio {
+  width: 750rpx;
+  display: flex;
+  height: 130rpx;
+  line-height: 130rpx;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #d8d8d8;
+  overflow: hidden;
+  font-size: 32rpx;
+  background-color: white;
+}
+
+.navstudio:last-child {
+  margin-bottom: 102rpx;
+}
+
+.navstudio_date {
+  width: 220rpx;
+  margin-left: 30rpx;
+  overflow: hidden;
+  color: #353535;
+  height: 130rpx;
+  line-height: 130rpx;
+}
+
+.navstudio_name {
+  flex: 1;
+  overflow: hidden;
+  color: #b2b2b2;
+  height: 130rpx;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+}
+
+.navstudio_program {
+  flex: 1;
+  margin-right: 30rpx;
+  overflow: hidden;
+  /* text-align: right; */
+  color: #b2b2b2;
+  line-height: 45rpx;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.navstudio_program:nth-child(1) {
+  text-align: right;
+}
+
+.navstudio_program:nth-child(2) {
+  text-align: left;
+}

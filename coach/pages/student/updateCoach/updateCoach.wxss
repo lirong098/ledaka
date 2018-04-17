@@ -1,0 +1,2 @@
+/* pages/student/updateCoach/updateCoach.wxss */
+@import "../../choosestudio/choosestudio.wxss";

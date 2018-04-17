@@ -1,0 +1,18 @@
+<!--pages/addcoach/addcoach.wxml-->
+<scroll-view class="container" scroll-y="true">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="main">
+            <input type="number" name="coach_id" placeholder="教练编号"/>
+            <button formType="submit">搜索</button>
+        </view>
+    </form>
+    <view class="nav">
+      <view class="notice-text" wx:for ="{{array}}"  > 
+        <image class="userlcon" src="{{item.picture}}"></image>
+        <text>{{item.coach_name}}</text>
+        <text>{{item.id}}</text>
+        <text class="buttons" data-index="{{index}}" bindtap="bindtapadd">添加</text>
+     </view>
+    </view>
+
+</scroll-view>

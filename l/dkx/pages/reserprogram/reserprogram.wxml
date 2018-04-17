@@ -1,0 +1,62 @@
+<!--pages/reserprogram/reserprogram.wxml-->
+<scroll-view class="container" scroll-y="true" >
+  <view class="nav">
+    <view class="{{navm}}" bindtap="bindnavmain">
+      <text class="{{navmaintext}}">{{navmain}}</text>
+    </view>
+    <view class="{{navl}}" bindtap="bindnavleft">
+      <text class="{{navlefttext}}">{{navleft}}</text>
+    </view>
+    <view class="{{navr}}" bindtap="bindnavright">
+      <text class="{{navrighttext}}">{{navright}}</text>
+    </view>
+  </view>
+  <block wx:if="{{show_page}}">
+    <block wx:if="{{coach_id ==0}}">
+      <view class="username" bindtap="bindaddcoach">
+        <image class="icon" src="{{array['picture']}}" style="border-radius: 10%;"></image>
+        <text class="name">{{array['coach_name']}}</text>
+        <text class="coach">{{coachtext}}</text>
+        <image class="arrow" src="/images/jiantou.png"></image>
+      </view>
+    </block>
+    <block wx:else>
+      <navigator class="username" url="../mycoach/mycoach?msg={{array['msg']}}&coach_id={{coach_id}}&id={{array['id']}}">
+        <image class="icon" src="{{array['picture']}}" style="border-radius: 10%;"></image>
+        <text class="name">{{array['coach_name']}}</text>
+        <text class="coach">{{coachtext}}</text>
+        <image class="arrow" src="/images/jiantou.png"></image>
+      </navigator>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="container_title">
+      <view class="container_title_top" bindtap="bindtopweek">
+        <image class="container_title_top_icon" src="/images/lt.png"></image>上周
+      </view>
+      <view class="container_title_datetime">
+        {{weekend}}
+      </view>
+      <view class="container_title_bottom" bindtap="bindbottomweek"><text style="margin-right:3rpx;">下周</text>
+        <image class="container_title_top_icon" src="/images/gt.png"></image>
+      </view>
+    </view>
+  </block>
+  <scroll-view scroll-y="true" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}">
+    <include src="../nav/nav.wxml" wx:if="{{show_page}}" />
+    <block wx:else>
+      <navigator class="navstudio" wx:for="{{array_info}}" wx:key="id" url="../student/student?coach_id={{item.coach_id}}&schedule_id={{item.schedule_id}}" style="{{item.style}}">
+        <view class="navstudio_name"> 
+          <text style="color:#353535;font-size:36rpx;">{{item.class_month}}{{item.class_date}}</text>
+          <text>{{item.week}}</text>
+        </view>
+        <view class="navstudio_date">
+          <text style="color:#353535;font-size:36rpx">{{item.start_time}}-{{item.end_time}}</text>
+          <text>{{item.program_name}}</text>
+        </view>
+        <text class="navstudio_program" style="{{item.status_style}}">{{item.status_text}}</text>
+      </navigator>
+    </block>
+  </scroll-view>
+
+</scroll-view>

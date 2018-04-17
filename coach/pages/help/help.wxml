@@ -1,0 +1,101 @@
+<!--help.wxml-->
+<scroll-view class="container" scroll-y="true" scroll-into-view="{{toView}}">
+  <view class="t1">
+    <text>乐打卡教练版</text>
+  </view>
+
+  <view class="contents">
+    <text>为小型工作室量身定做的客户管理和市场营销应用，功能精简、容易上手，结合国内外领先工作室管理的最佳实践。100%免费，让健身教练的创业更成功。</text>
+  </view>
+
+  <view class="t2">
+    <text>帮助目录</text>
+  </view>
+
+  <view class="catalogue" bindtap="bindtapTo1">
+    <text>1. 教练初始化设置</text>
+  </view>
+  <view class="catalogue" bindtap="bindtapTo2">
+    <text>2. 添加学员</text>
+  </view>
+  <view class="catalogue" bindtap="bindtapTo3">
+    <text>3. 教练排课</text>
+  </view>
+  <view class="catalogue" bindtap="bindtapTo4">
+    <text>4. 学员管理和互动</text>
+  </view>
+
+  <view class="t2">
+    <text>详细内容</text>
+  </view>
+
+  <view id="c1" class="t3">
+    <text>1. 教练初始化设置</text>
+  </view>
+  <view class="contents">
+    <text>教练设置自己的基本信息、工作室和个人主页。点击以下图片播放详细操作视频：</text>
+  </view>
+
+  <view class="images" bindtap="navigateTo" id="1">
+    <image src="{{url}}1.png" mode="aspectFit"></image>
+    <view class="desc">
+      <text>教练版 - 教练初始化设置视频(1`40``)</text>
+    </view>
+  </view>
+
+
+  <view id="c2" class="t3">
+    <text>2. 添加学员</text>
+  </view>
+  <view class="contents">
+    <text>教练分享学员版小程序给学员，并自动添加学员纪录。点击以下图片播放详细操作视频：</text>
+  </view>
+
+  <view class="images" bindtap="navigateTo" id="2">
+    <image src="{{url}}2.png" mode="aspectFit"></image>
+    <view class="desc">
+      <text>教练版 - 添加学员视频(1`20``)</text>
+    </view>
+  </view>
+
+
+  <view id="c3" class="t3">
+    <text>3. 教练排课</text>
+  </view>
+  <view class="contents">
+    <text>教练排团课和私教，接受和查看学员预约，以及取消课程。点击以下图片播放详细操作视频：</text>
+  </view>
+
+  <view class="images" bindtap="navigateTo" id="3">
+    <image src="{{url}}3.png" mode="aspectFit"></image>
+    <view class="desc">
+      <text>教练版 - 排课视频(2`55``)
+      </text>
+    </view>
+  </view>
+
+
+  <view id="c4" class="t3">
+    <text>4. 学员管理和互动</text>
+  </view>
+  <view class="contents">
+    <text>教练管理学员纪录和分组、查看和统计学员上课纪录、以及录入训练备注。点击以下图片播放详细操作视频：</text>
+  </view>
+
+  <view class="images" bindtap="navigateTo" id="4">
+    <image src="{{url}}4.png" mode="aspectFit"></image>
+    <view class="desc">
+      <text>教练版 - 学员管理和互动视频(2`50``)</text>
+    </view>
+  </view>
+
+  <view class="contents" style="margin-top: 80rpx;">
+    <text>如果你在使用过程中有任何问题和建议，请随时告诉我们，谢谢。</text>
+  </view>
+  <view class="contents">
+    <text>客服支持电话：13701859701</text>
+  </view>
+
+  <view style="height:200rpx;"></view>
+
+</scroll-view>

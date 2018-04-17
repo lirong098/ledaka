@@ -1,0 +1,27 @@
+<import src="/utils/calendar/calendar.wxml"/>
+<view class="fullcalendar-header">
+    <!--<view>
+        <button class="fullcalendar-header__button" bindtap="premonth"><text class="iconfont icon-left iconfont-1_5x"></text></button>
+    </view>-->
+    <view class="text_img" bindtap="premonth" style="margin-left:80rpx;width:190rpx;">
+       <image src="/images/lt.png"></image><text style="color:#4bc2d1;">上月</text>       
+    </view>
+    <view class="date-picker">
+    	<picker bindchange="yearchange" style="display:inline-block;" value="{{index}}" range="{{avaliable_years}}">
+            <view class="picker">{{ cal1.year }}年</view>
+        </picker>
+        <picker bindchange="monthchange"  style="display:inline-block;margin-left:10rpx;" value="{{cal.month}}"  range="{{avaliable_months}}">
+            <view class="picker">{{cal1.month}}月</view>
+        </picker>
+    </view>
+     <view class="text_img" style="margin-right:80rpx;width:190rpx;text-align:right;"  bindtap="nextmonth">
+               <text style="color:#4bc2d1;">下月</text><image src="/images/gt.png"></image>   
+    </view>
+    <!--<view>
+        <button class="fullcalendar-header__button" bindtap="nextmonth">
+            <text class="iconfont icon-right iconfont-1_5x"></text>
+        </button>
+    </view>-->
+    
+</view>
+<template is="fullCalendar" data="{{...cal1}}"/>

@@ -1,0 +1,27 @@
+<!--pages/manager/manager.wxml-->
+<view class="TraNav" wx:if="{{ShowNav}}">
+  <view class="TraNav_left" bindtap="addtrainee">
+    <image style="margin-top:-2rpx;" src="/images/addprogram.png"></image>
+    <text>新增</text>
+    <!-- <view class="TraNav_left_bottom"></view> -->
+  </view>
+  <navigator class="TraNav_left" url="../managergroup/managergroup">
+    <image src="/images/member1.png"></image>
+    <text>学员组</text>
+    <!-- <view class="TraNav_left_bottom"></view> -->
+  </navigator>
+  <view class="TraNav_right" bindtap="showInput">
+    <image src="/images/search.png"></image>
+    <text>搜索</text>
+    <!-- <icon size="24" type="search" class="weui-icon-search"></icon> -->
+  </view>
+</view>
+<include src="../../utils/searchbar/searchbar.wxml" wx:if="{{!ShowNav}}" />
+<include src="../../utils/traineelist/traineelist.wxml" wx:if="{{inputshow}}" />
+<block wx:else>
+  <navigator class="main-text" wx:for="{{trainee_array}}" wx:for-index="idx" wx:for-item="v" url="../studentinfo/studentinfo?id={{v.id}}">
+    <image class="main-text-img" src="{{v.picture}}"></image>
+    <text class="main_text_text">{{v.name}}</text>
+    <text class="main_text_text2">{{v.seorder}}</text>
+  </navigator>
+</block>

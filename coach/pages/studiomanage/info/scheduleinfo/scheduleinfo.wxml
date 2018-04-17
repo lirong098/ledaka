@@ -1,0 +1,41 @@
+<!--pages/studiomanage/info/scheduleinfo/scheduleinfo.wxml-->
+<scroll-view class="container" scroll-y="true" bindscrolltolower="loadMore">
+  <view class="TraNav">
+    <view class="TraNav_left" bindtap="bindTraNavLeft">
+      <text>私教</text>
+      <text>{{length_0}}</text>
+      <view class="TraNav_left_bottom" wx:if="{{ShowPage}}"></view>
+    </view>
+    <view class="TraNav_left" bindtap="bindTraNavRight">
+      <text>团课</text>
+      <text>{{length_1}}</text>
+      <view class="TraNav_left_bottom" wx:if="{{!ShowPage}}"></view>
+    </view>
+  </view>
+
+  <view class="navstudio" wx:for="{{schedule_0}}" wx:if="{{ShowPage}}">
+    <!-- <text class="navstudio_date">{{item.start_time}}{{item.end_time}}ddd</text> -->
+    <view class="navstudio_program">
+      <text>{{item.change_date.class_date}}</text>
+      <text>{{item.change_date.start_time}}-{{item.change_date.end_time}}</text>
+    </view>
+    <view class="navstudio_program">
+      <text>{{item.program_name}}</text>
+      <text>{{item.trainee_name}}</text>
+    </view>
+    <text class="navstudio_name">{{item.coach_name}}</text>
+  </view>
+
+  <view class="navstudio" wx:for="{{schedule_1}}" wx:if="{{!ShowPage}}">
+    <!-- <text class="navstudio_date">{{item.start_time}}{{item.end_time}}ddd</text> -->
+    <view class="navstudio_program">
+      <text>{{item.change_date.class_date}}</text>
+      <text>{{item.change_date.start_time}}-{{item.change_date.end_time}}</text>
+    </view>
+    <view class="navstudio_program">
+      <text>{{item.program_name}}</text>
+      <text>{{item.trainee_name}}</text>
+    </view>
+    <text class="navstudio_name">{{item.coach_name}}</text>
+  </view>
+</scroll-view>

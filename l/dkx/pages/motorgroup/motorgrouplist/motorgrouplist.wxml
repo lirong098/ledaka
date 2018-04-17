@@ -1,0 +1,13 @@
+<!--pages/motorgroup/motorgrouplist/motorgrouplist.wxml-->
+<scroll-view class="container" scroll-y="true">
+    <view class="nav">
+        <view class="{{navl}}" bindtap = "bindnavleft">
+            <text >排行榜</text>
+        </view>
+        <view class="{{navr}}" bindtap = "bindnavright">
+            <text >我们的故事</text>
+        </view>
+    </view>
+    <include src="../traineelist.wxml" wx:if="{{pageshow}}"/>
+    <include src="../traineephoto.wxml" wx:else/>
+</scroll-view>

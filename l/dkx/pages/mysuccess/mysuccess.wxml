@@ -1,0 +1,19 @@
+<!--pages/mysuccess/mysuccess.wxml-->
+    <view class="nav">
+        <view class="nav_left">
+            <view class="nav_left_year">{{year}}</view>
+            <view class="nav_left_view">
+            <text style="font-size:68rpx;color:#4bc1d2;">{{year_qty}}</text>
+            {{year_next}}
+            </view>
+        </view>
+        <view class="nav_right">
+            <view class="nav_right_sum">{{sum}}</view>
+            <view class="nav_right_view" >
+            <text style="font-size:68rpx;color:#4bc1d2;">{{sum_qty}}</text>
+            {{sum_next}}
+            </view>
+        </view>        
+    </view>
+    <!--end nav-->
+

@@ -1,0 +1,45 @@
+<!--pages/record/record.wxml-->
+<include  src="../showToast/showToast.wxml" wx:if="{{showToast}}"/>
+<scroll-view class="container" scroll-y="true" style="{{style}}">
+  <view class="notice-text">
+        <image class="userlcon" src="{{recordinfo.trainee_picture}}"></image>
+        <view class="news">
+          <view class="news_name">
+            <text class="news_name_text">{{recordinfo.trainee_name_1}}</text>
+            <text class="news_name_week">{{recordinfo.studio_name}}</text>
+          </view>
+          <view class="news_name" style="margin-top:8rpx;">
+            <text class="news_name_text" style="font-size:32rpx;color:#b2b2b2;">{{recordinfo.program_name}}</text>
+            <text class="news_name_week">{{recordinfo.change_date.class_date}} {{recordinfo.change_date.start_time}}</text>
+          </view>
+        </view>
+ </view>
+  <view class="main"><!--start main-->
+        <text class="main_text">{{recordinfo.trainee_comments}}</text>
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__bd">
+                            <view class="weui-uploader__files" id="uploaderFiles">
+                                <block wx:for-items="{{files}}" wx:key="{{index}}">
+                                    <view class="weui-uploader__file"  id="{{url}}{{item}}">
+                                        <image class="weui-uploader__img" bindtap="previewImage" src="{{url}}{{item}}" id="{{url}}{{item}}" mode="aspectFill" />
+                                    </view>
+                                </block>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+  </view><!--end main-->
+  <view class="coach_text">
+    <view class="coach_text_name">
+      <image src="{{recordinfo.coach_picture}}"></image>
+      <text class="coach_text_name_text">{{recordinfo.coach_name}}</text>
+    </view>
+    <text class="coach_text_text">{{recordinfo.coach_comments}}</text>
+  </view>
+</scroll-view>
+<navigator class="button" url="../traineerecordtext/traineerecordtext?record_id={{record_id}}&trainee_comments={{recordinfo.trainee_comments}}" hover-class="none" wx:if="{{studiolist !=1}}">{{save}}</navigator>

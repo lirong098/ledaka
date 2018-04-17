@@ -1,0 +1,26 @@
+ .canvas {
+    width: 100%;
+    height: 320rpx;
+}
+.container_canvas_month{
+    height: 70rpx;
+    line-height: 70rpx;
+    text-align: center;
+    width:100%;
+     font-size: 36rpx;
+    color:#838383;
+    background-color:#F5F5F5;
+}
+.container_canvas{
+    background-color: white;
+    width:100%;
+    position:fixed;
+    top:0rpx;
+}
+.container_canvas_view{
+    font-size:60rpx;
+    height:240rpx;
+    color:#b2b2b2;
+    line-height:240rpx;
+    text-align:center;
+}

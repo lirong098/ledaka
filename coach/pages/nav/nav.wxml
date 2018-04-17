@@ -1,0 +1,26 @@
+<!--pages/nav/nav.wxml-->
+<loading hidden="{{hidden}}">
+  课表加载中...
+</loading>
+<view class="nav-title" style="{{txtStyle}}">
+  <navigator class="nav-title-left" url="../schedule/schedule">
+    <image class="icon" src="/images/day.png"></image>
+    <text style="color:#4bc1d2;">{{month}}</text>
+  </navigator>
+  <view class="nav-title-right-top">
+    <navigator wx:for="{{lap}}" style="margin-top:16rpx;" hover-class="none">
+      <text style="color:#838383;">{{item.week}}</text>
+      <text class="{{item.styleclass}}">{{item.day}}</text>
+    </navigator>
+  </view>
+</view>
+<view class="main-nav-title">
+  <view class="main-nav-title-left">
+    <text wx:for="{{datetime}}">{{item}}</text>
+  </view>
+  <view class="main-nav-title-right">
+    <view class="main-nav-title-right-top" wx:for="{{[2,3,4,5,6,7,8]}}" wx:for-item="item">
+      <navigator wx:for="{{[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]}}" wx:for-index="idx" wx:for-item="it" url="{{arrayobj[item][it].url}}" class="{{arrayobj[item][it].class}}" style="{{arrayobj[item][it].style}}{{arrayobj[item][it].borderstyle}}">{{arrayobj[item][it].schedule_start_time}}{{arrayobj[item][it].program_name}} </navigator>
+    </view>
+  </view>
+</view>

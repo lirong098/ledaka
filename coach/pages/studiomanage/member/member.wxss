@@ -1,0 +1,83 @@
+/* member.wxss */
+@import "../studiomanage.wxss";
+@import "../../../utils/traineelist/traineelist.wxss";
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  height: 130rpx;
+}
+
+.nav_button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav_button_text {
+  flex: 1;
+  margin-top: 10rpx;
+  text-align: center;
+  color: #b2b2b2;
+}
+
+.nav_button_view {
+  height: 6rpx;
+  width: 100%;
+  /* margin-left: 26rpx; */
+}
+
+.main_text_tips1 {
+  position: absolute;
+  top: 10rpx;
+  right: 32rpx;
+  font-size: 32rpx;
+  color: #b2b2b2;
+  width: 80rpx;
+  text-align: right;
+}
+
+.main_text_tips2 {
+  position: absolute;
+  top: 10rpx;
+  right: 28rpx;
+  font-size: 32rpx;
+  color: #b2b2b2;
+  width: 200rpx;
+  text-align: right;
+}
+
+.main_text_tips3 {
+  position: absolute;
+  top: 10rpx;
+  right: 320rpx;
+  font-size: 32rpx;
+  color: #b2b2b2;
+  width: 180rpx;
+  text-align: right;
+}
+
+.main_text_tips4{
+  position: absolute;
+  top: 10rpx;
+  right: 380rpx;
+  font-size: 32rpx;
+  color: #b2b2b2;
+  width: 180rpx;
+  text-align: right;
+}
+
+.tips {
+  position: relative;
+  height: 60rpx;
+}
+
+.blue {
+  color: #4bc1d2;
+}
+
+.other {
+  color: #b2b2b2;
+  background-color: white;
+}

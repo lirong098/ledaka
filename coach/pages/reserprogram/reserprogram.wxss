@@ -1,0 +1,144 @@
+/* pages/reserprogram/reserprogram.wxss */
+@import "../nav/nav.wxss";
+@import "../navstudio/navstudio.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top: 1rpx solid #d8d8d8;
+  background-color: #f7f9f8;
+}
+
+.nav {
+  height: 100rpx;
+  /*width:750rpx;*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+}
+
+.nav-left-view {
+  height: 6rpx;
+  /*width:160rpx;*/
+  background-color: #4bc1d2;
+}
+
+.nav-right-view {
+  height: 6rpx;
+  /*width:160rpx;*/
+  background-color: #4bc1d2;
+}
+
+.navrighttext {
+  color: #888;
+}
+
+.navlefttext {
+  color: #4bc1d2;
+}
+
+#navlr {
+  height: 100rpx;
+  font-size: 38rpx;
+  line-height: 94rpx;
+  color: #353535;
+  flex: 1;
+  background-color: #ebeff3;
+}
+
+#navlrs {
+  height: 100rpx;
+  font-size: 38rpx;
+  line-height: 94rpx;
+  text-align: center;
+  color: #353535;
+  flex: 1;
+  background-color: white;
+}
+
+.nav-main {
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 70rpx;
+  background-color: #4bc1d2;
+  font-size: 80rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10rpx;
+}
+
+.nav-main text {
+  color: white;
+  flex: 1;
+  margin-bottom: 10rpx;
+}
+
+.username {
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #ebeff3;
+}
+
+.icon {
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+}
+
+.arrow {
+  width: 20rpx;
+  height: 35rpx;
+  margin-top: 34rpx;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+  /*border:1rpx solid red;*/
+}
+
+.name {
+  font-size: 36rpx;
+  color: #000;
+  width: 345rpx;
+  margin-left: 40rpx;
+}
+
+.coach {
+  font-size: 36rpx;
+  color: #4ac0d2;
+  width: 190rpx;
+  text-align: right;
+}
+
+.add_program{
+  width: 200rpx;
+  height: 200rpx;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position:fixed;
+  bottom:-100rpx;
+  border-radius: 50%;
+  z-index: 100;
+  margin-left:275rpx ;
+  overflow: hidden;
+  background-color: #ebeff3;
+  border:1rpx solid #d8d8d8;  
+}
+.add_program image{
+  margin-top:20rpx;
+  height: 70rpx;
+  width: 70rpx;
+  background-color:rgba(0,0,0,0);
+}
+

@@ -1,0 +1,35 @@
+<!--recommend.wxml-->
+<scroll-view class="container" scroll-y="true">
+
+  <view class="content">
+    <view class="logo">
+      <image class="logoimage" src="{{https}}{{source}}" mode="aspectFill"></image>
+    </view>
+
+    <view class="title">
+      <text>{{info.title}}</text>
+      <!-- <text>和您的朋友一起锻炼吧</text> -->
+    </view>
+
+    <view class="introduce">
+      <text>{{info.contents}}</text>
+      <!-- <text>
+        您知道和朋友一起锻炼的效果是单独锻炼的3倍吗？邀请您的朋友和您一起来锻炼吧。 工作室将为您的朋友提供一节价值300元的免费体验课。送上您的祝福并转发您的朋友，享受和朋友一起锻炼的乐趣吧。
+      </text> -->
+    </view>
+    <view style="height:30rpx;"></view>
+  </view>
+
+  <view class="tips_title">第一步：写下你的祝福</view>
+  <view class="wish">
+    <text>{{info.wish}}</text>
+    <!-- <text class="ipt">我送你一节健身工作室的免费私教体验课。来和我们一起锻炼吧！</text> -->
+  </view>
+
+  <view class="tips_title">第二步：</view>
+  <button class="btn_share" disabled="false">转发朋友</button>
+  <view style="height:130rpx;"></view>
+</scroll-view>
+
+<button class="btn_left" bindtap="btnClickShare">进入转发页</button>
+<button class="btn_right" bindtap="btnClickEdit">编辑</button>

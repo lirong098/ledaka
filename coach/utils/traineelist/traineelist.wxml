@@ -1,0 +1,25 @@
+<scroll-view class="container" scroll-y="true">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <view class="main" wx:for="{{grouparray}}">
+      <view class="main-title" bindtap="{{item.tap}}" data-index="{{index}}">
+        <image class="main_title_image" src="{{item.mainicon}}"></image>
+        <text class="main_title_text">{{item.group_name}}</text>
+          <text class="main_title_text2">{{item.trainee_count}}名</text>
+      </view>
+      <block wx:if="{{show}}">
+        <navigator class="main-text" wx:for="{{item.trainee}}" wx:for-index="idx" wx:for-item="v" url="../studentinfo/studentinfo?id={{v.id}}" wx:if="{{item.status == '1'}}" >
+          <image class="main-text-img" src="{{v.picture}}"></image>
+          <text class="main_text_text">{{v.trainee_name}}</text>
+          <text class="main_text_text2">{{v.seorder}}</text>
+        </navigator>
+      </block>
+      <block wx:else>
+        <label class="main-text" wx:for="{{item.trainee}}" wx:for-index="idx" wx:for-item="v" wx:if="{{item.status == '1'}}">
+          <image class="main-text-img" src="{{v.picture}}"></image>
+          <text class="main_text_text">{{v.trainee_name}}</text>
+          <radio class="main_text_text2" value="{{v.id}},{{v.trainee_name}}" checked="{{v.checked}}" color="#4bc1d2" />
+        </label>
+      </block>
+    </view>
+  </radio-group>
+</scroll-view>

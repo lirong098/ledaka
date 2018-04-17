@@ -1,0 +1,13 @@
+/* pages/showToast/showToast.wxss */
+.showtoast{
+  width:750rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 32rpx;
+  text-align: center;
+  /*position: fixed;
+  top:0;*/
+  background-color: #4BC1D2;
+  color:white;
+  z-index: 100;
+}

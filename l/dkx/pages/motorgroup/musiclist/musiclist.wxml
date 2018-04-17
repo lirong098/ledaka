@@ -1,0 +1,18 @@
+<!--pages/motorgroup/musiclist/musiclist.wxml-->
+<include src="../../../utils/searchbar/searchbar.wxml"/>
+    <block  wx:if="{{musicshow}}">
+      <scroll-view class="music" scroll-y="true" bindscrolltolower="loadMore">  
+        <view class="music_list" wx:for="{{musiclist}}" bindtap="changemusic" data-songmid="{{item.song_id}}" data-title="{{item.title}}" data-author="{{item.author}}" data-pic_big="{{item.pic_big}}">
+          <text>{{item.title}}</text>
+          <text>{{item.author}}</text>
+        </view>
+      </scroll-view>
+    </block>
+    <block wx:else>
+      <view class="music"> 
+        <view class="music_list"  wx:for="{{musiclist}}" bindtap="changemusic" data-songmid="{{item.songid}}" data-title="{{item.songname}}" data-author="{{item.artistname}}" data-pic_big="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000">
+          <text>{{item.songname}}</text>
+          <text>{{item.artistname}}</text>
+        </view>
+      </view>
+    </block>

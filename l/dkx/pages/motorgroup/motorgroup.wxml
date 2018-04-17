@@ -1,0 +1,12 @@
+<!--pages/motorgroup/motorgroup.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <navigator class="username" wx:for="{{array}}" url="../motorgroup/motorgroupinfo/motorgroupinfo?motorgroup_id={{item.id}}">
+    <view class="view_text">
+      <text class="name">{{item.name}}</text>
+      <text class="mar">{{item.text}}</text>
+      <text class="qty">{{item.qty}}</text>                  
+    </view>
+    <image class="arrow" src="/images/arrow.png"></image>
+  </navigator>
+</scroll-view>
+<view class="footer" bindtap="addprogram">新建群</view>

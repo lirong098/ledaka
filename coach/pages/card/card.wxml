@@ -1,0 +1,13 @@
+<!--pages/card/card.wxml-->
+<scroll-view class="container" scroll-y="true">
+  <view class="viewbox" wx:for="{{array}}">
+    <navigator class="username" hover-class="none" url="../addcard/addcard?id={{item.id}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}">
+      <view class="view_text">
+        <text class="name">{{item.membership_name}}</text>
+      </view>
+      <image class="arrow" src="/images/arrow.png"></image>
+    </navigator>
+    <view class="viewdelitem" bindtap="delItem" data-index="{{index}}">删除</view>
+  </view>
+</scroll-view>
+<navigator url="../addcard/addcard?coach_id={{coach_id}}" class="footer" bindtap="addprogram">新增卡类型</navigator>

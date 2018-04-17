@@ -1,0 +1,13 @@
+<!--pages/addgroup/addgroup.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<scroll-view class="container" scroll-y="true">
+    <view class="username"  >
+            <text class="name">{{groupname}}</text>
+            <input  name="name"placeholder="{{placeholder}}" placeholder-style="color:#B5B5B5;" value="{{group_name}}"/>
+    </view>
+</scroll-view>
+  <view class="footer">
+    <button class="bind" bindtap="binddeleta" wx:if="{{group_id > 0}}">删除</button>
+    <button class="bind" formType="submit">{{save}}</button>
+  </view>
+</form>

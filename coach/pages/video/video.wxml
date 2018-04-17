@@ -1,0 +1,6 @@
+<!--video.wxml-->
+<scroll-view class="container" scroll-y="false">
+  <video class="video" id="myVideo" src="{{src}}" controls></video>
+
+  
+</scroll-view>

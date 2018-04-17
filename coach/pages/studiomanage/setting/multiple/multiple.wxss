@@ -1,0 +1,82 @@
+/* multiple.wxss */
+.title {
+  position: fixed;
+  top: -1rpx;
+  display: flex;
+  width: 750rpx;
+  height: 80rpx;
+  background-color: #ebeff3;
+  line-height: 80rpx;
+}
+
+.box_right {
+  width: 682rpx;
+  margin-right: 50rpx;
+  text-align: right;
+}
+
+.text_title {
+  font-size: 38rpx;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 100rpx;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: #4bc1d2;
+  width: 100%;
+  color: white;
+  font-size: 40rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-radius: 0rpx;
+  text-align: center;
+}
+
+.edit-no {
+  position: fixed;
+  bottom: -1rpx;
+  width: 100%;
+}
+
+.item_class {
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  margin-top: 10rpx;
+  height: 130rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.item_class_img {
+  margin-left: 30rpx;
+  margin-top: 5rpx;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.item_text_name {
+  width: 450rpx;
+  font-size: 36rpx;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+  overflow: hidden;
+}
+
+.item_checkbox {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 43rpx;
+  margin-right: 20rpx;
+}

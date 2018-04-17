@@ -1,0 +1,91 @@
+/* pages/userinfo/userinfo.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* border: 1rpx solid red; */
+  /*background-color: #f2f2f2;*/
+}
+
+button {
+  background-color: #4bc1d2;
+  color: white;
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 100%;
+  font-size: 40rpx;
+  position: fixed;
+  margin-left: 1rpx;
+  margin-bottom: -25rpx;
+  bottom: 30rpx;
+  /*border-radius: 5rpx;*/
+  border-radius: 0px;
+  /* border: 1rpx solid red; */
+}
+
+.main {
+  margin-top: 46rpx;
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.username {
+  height: 110rpx;
+  line-height: 110rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #d8d8d8;
+  background-color: white;
+}
+
+.arrow {
+  width: 26rpx;
+  height: 26rpx;
+  margin-top: 38rpx;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+  /*border:1rpx solid red;*/
+}
+
+.name {
+  font-size: 36rpx;
+  color: #000;
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.username input {
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+  font-size: 32rpx;
+  color: #888;
+  text-align: right;
+  flex: 2;
+  padding-left: 10rpx;
+}
+
+.userpicker {
+  /*margin-right:30rpx;*/
+  font-size: 32rpx;
+  color: #888;
+  text-align: right;
+  width: 400rpx;
+  margin-right: 30rpx;
+  padding-left: 10rpx;
+  flex: 2;
+}
+
+.usergender {
+  display: none;
+}
